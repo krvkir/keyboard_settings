@@ -1,0 +1,15 @@
+partial alphanumeric_keys
+xkb_symbols "fnkeys" {
+key <FK13> { [XF86Launch1] };
+key <FK14> { [XF86Launch2] };
+key <FK15> { [XF86Launch3] };
+key <FK16> { [XF86Launch4] };
+key <FK17> { [XF86Launch5] };
+key <FK18> { [XF86Launch6] };
+key <FK19> { [XF86Launch7] };
+key <FK20> { [XF86Launch8] };
+key <FK21> { [XF86Launch9] };
+key <FK22> { [XF86LaunchA] };
+key <FK23> { [XF86LaunchB] };
+key <FK24> { [XF86LaunchC] };
+};

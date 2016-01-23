@@ -1,0 +1,20 @@
+xkb_keymap {
+	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
+	xkb_types     { include "complete"	};
+	xkb_compat    { include "complete"	};
+	xkb_symbols   {
+              include "pc+us+ru(winkeys):2+inet(evdev)+my(fnkeys)"
+              
+              include "group(ctrl_shift_toggle)"
+              // include "group(alt_shift_toggle)"
+              // include "group(shift_caps_switch)"
+              
+	      include "capslock(overlay1)"
+              //include "capslock(hyper)"
+              
+              include "level3(ralt_switch)"
+              // include "level3(caps_switch)"
+              // include "level5(ralt_switch)"
+        };
+	xkb_geometry  { include "pc(pc105)"	};
+};
