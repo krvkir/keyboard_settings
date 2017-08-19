@@ -24,33 +24,33 @@ xkb_symbols "winkeys" {
 hidden partial alphanumeric_keys
 xkb_symbols "common" {
 
-    key <AE01> { overlay1 = <FK01>,  [           1,      exclam  ] };
-    key <AE02> { overlay1 = <FK02>,  [           2,    quotedbl  ] };
-    key <AE03> { overlay1 = <FK03>,  [           3,  numbersign  ] };
-    key <AE04> { overlay1 = <FK04>,  [           4,    asterisk  ] };
-    key <AE05> { overlay1 = <FK05>,  [           5,       colon  ] };
-    key <AE06> { overlay1 = <FK06>,  [           6,       comma  ] };
-    key <AE07> { overlay1 = <FK07>,  [           7,      period  ] };
-    key <AE08> { overlay1 = <FK08>,  [           8,   semicolon  ] };
-    key <AE09> { overlay1 = <FK09>,  [           9,   parenleft  ] };
-    key <AE10> { overlay1 = <FK10>,  [           0,  parenright  ] };
-    key <AE11> { overlay1 = <FK11>,  [       minus,  underscore  ] };
-    key <AE12> { overlay1 = <FK12>,  [       equal,        plus  ] };
-    key <BKSL> { [   backslash,         bar  ] };
+    key <AE01> { overlay1 = <FK01>, [           1,      exclam  ] };
+    key <AE02> { overlay1 = <FK02>, [           2,    quotedbl  ] };
+    key <AE03> { overlay1 = <FK03>, [           3,  numbersign  ] };
+    key <AE04> { overlay1 = <FK04>, [           4,    asterisk  ] };
+    key <AE05> { overlay1 = <FK05>, [           5,       colon  ] };
+    key <AE06> { overlay1 = <FK06>, [           6,       comma  ] };
+    key <AE07> { overlay1 = <FK07>, [           7,      period  ] };
+    key <AE08> { overlay1 = <FK08>, [           8,   semicolon  ] };
+    key <AE09> { overlay1 = <FK09>, [           9,   parenleft  ] };
+    key <AE10> { overlay1 = <FK10>, [           0,  parenright  ] };
+    key <AE11> { overlay1 = <FK11>, [       minus,  underscore  ] };
+    key <AE12> { overlay1 = <FK12>, [       equal,        plus  ] };
+    key <BKSL> {                    [ backslash,         bar  ] };
 
-    key <AB10> { [       slash,    question  ] };
-    key <LSGT> { [       slash,         bar  ] };
+    key <AB10> {                    [ slash,    question  ] };
+    key <LSGT> {                    [ slash,         bar  ] };
 
     key <TLDE> {                    [       Cyrillic_io,       Cyrillic_IO, Escape  ] };
     key <AD01> { overlay1 = <FK23>, [   Cyrillic_shorti,   Cyrillic_SHORTI  ] };
     key <AD02> { overlay1 = <FK24>, [      Cyrillic_tse,      Cyrillic_TSE, XF86Close  ] };
-    key <AD03> {                    [        Cyrillic_u,        Cyrillic_U  ], actions=[NoAction(), NoAction(), RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super)]   };
-    key <AD04> {                    [       Cyrillic_ka,       Cyrillic_KA  ], actions=[NoAction(), NoAction(), RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super)]   };
+    key <AD03> { overlay1 = <CBKS>, [        Cyrillic_u,        Cyrillic_U  ], actions=[NoAction(), NoAction(), RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super)]   };
+    key <AD04> { overlay1 = <CDEL>, [       Cyrillic_ka,       Cyrillic_KA  ], actions=[NoAction(), NoAction(), RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super)]   };
     key <AD05> {                    [       Cyrillic_ie,       Cyrillic_IE  ] };
     key <AD06> {                    [       Cyrillic_en,       Cyrillic_EN  ] };
-    key <AD07> {                    [      Cyrillic_ghe,      Cyrillic_GHE  ], actions=[NoAction(), NoAction(), RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super)]   };
+    key <AD07> { overlay1 = <CLFT>, [      Cyrillic_ghe,      Cyrillic_GHE  ], actions=[NoAction(), NoAction(), RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super)]   };
     key <AD08> { overlay1 = <UP>,   [      Cyrillic_sha,      Cyrillic_SHA  ], actions=[NoAction(), NoAction(), RedirectKey(key=<UP>, clearmods=Super)] };
-    key <AD09> {                    [    Cyrillic_shcha,    Cyrillic_SHCHA  ], actions=[NoAction(), NoAction(), RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super)]  };
+    key <AD09> { overlay1 = <CRGT>, [    Cyrillic_shcha,    Cyrillic_SHCHA  ], actions=[NoAction(), NoAction(), RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super)]  };
     key <AD10> { overlay1 = <PGUP>, [       Cyrillic_ze,       Cyrillic_ZE  ], actions=[NoAction(), NoAction(), RedirectKey(key=<PGUP>, clearmods=Super)] };
     key <AD11> { overlay1 = <FK23>, [       Cyrillic_ha,       Cyrillic_HA  ] };
     key <AD12> { overlay1 = <FK24>, [ Cyrillic_hardsign, Cyrillic_HARDSIGN  ] };

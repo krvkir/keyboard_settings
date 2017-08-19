@@ -234,10 +234,12 @@ default xkb_keycodes "evdev" {
   <I241> = 241;	// #define KEY_FORWARDMAIL         233
   <I242> = 242;	// #define KEY_SAVE                234
   <I243> = 243;	// #define KEY_DOCUMENTS           235
-  <I244> = 244;	// #define KEY_BATTERY             236
-  <I245> = 245;	// #define KEY_BLUETOOTH           237
-  <I246> = 246;	// #define KEY_WLAN                238
-  <I247> = 247;	// #define KEY_UWB                 239
+
+  // Fake keycodes for virtual keys
+  <CLFT> = 244;	// #define KEY_BATTERY             236
+  <CRGT> = 245;	// #define KEY_BLUETOOTH           237
+  <CBKS> = 246;	// #define KEY_WLAN                238
+  <CDEL> = 247;	// #define KEY_UWB                 239
   <I248> = 248;	// #define KEY_UNKNOWN             240
   <I249> = 249;	// #define KEY_VIDEO_NEXT          241
   <I250> = 250;	// #define KEY_VIDEO_PREV          242
@@ -245,7 +247,6 @@ default xkb_keycodes "evdev" {
   <I252> = 252;	// #define KEY_BRIGHTNESS_ZERO     244
   <I253> = 253;	// #define KEY_DISPLAY_OFF         245
 
-  // Fake keycodes for virtual keys
   <LVL3> =   92;
   <MDSW> =   203;
   <ALT>  =   204;

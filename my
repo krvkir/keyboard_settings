@@ -5,8 +5,9 @@ xkb_keymap {
     xkb_symbols   {
         include "pc+us+ru(winkeys):2+inet(evdev)"
         include "pc(fnkeys)"
-        include "pc(capslock_level3shift)"
-        // include "pc(capslock_overlay1)"
+
+        // include "pc(capslock_level3shift)"
+        include "pc(capslock_overlay1)"
 
         include "group(ctrl_shift_toggle)"
         // include "group(alt_shift_toggle)"

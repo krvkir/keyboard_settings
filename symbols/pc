@@ -35,6 +35,12 @@ xkb_symbols "pc105" {
     key <COMP> {	[ Super_R			]	};
     key <PRSC> {	[ Super_R			]	};
 
+    // Virtual keys
+    key <CLFT> { actions=[ RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super) ] };
+    key <CRGT> { actions=[ RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super) ] };
+    key <CBKS> { actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super) ] };
+    key <CDEL> { actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super) ] };
+
     // Beginning of modifier mappings.
     modifier_map Shift  { Shift_L, Shift_R };
     modifier_map Lock   { Caps_Lock };
