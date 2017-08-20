@@ -100,7 +100,60 @@ xkb_symbols "editing" {
 };
 
 ///////////////////////////////////////////////////////////////////////////////
-// Overlays
+// Overlay1
+
+partial modifier_keys
+xkb_symbols "overlay1_caps" {
+    replace key <CAPS> {
+        [ NoSymbol ],
+        actions = [ SetControls(controls=overlay1) ]
+    };
+    modifier_map Mod5 { <CAPS> };
+};
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Level3
+
+partial modifier_keys
+xkb_symbols "level3_caps_switch" {
+    key <CAPS> {
+        type[Group1]="ONE_LEVEL"
+        , symbols[Group1] = [ ISO_Level3_Shift ]
+    };
+    include "level3(modifier_mapping)"
+};
+
+// Either Win key (while pressed) chooses the third shift level.
+partial modifier_keys
+xkb_symbols "level3_win_switch" {
+    include "pc(level3_lwin_switch)"
+    include "pc(level3_rwin_switch)"
+};
+
+// The left Win key (while pressed) chooses the third shift level.
+partial modifier_keys
+xkb_symbols "level3_lwin_switch" {
+    key <LWIN> {
+        type[Group1]="ONE_LEVEL",
+        symbols[Group1] = [ ISO_Level3_Shift ]
+    };
+    include "level3(modifier_mapping)"
+};
+
+// The right Win key (while pressed) chooses the third shift level.
+// (When using this map, you should set your keyboard as pc101 or pc102
+// instead of pc104 or pc105.)
+partial modifier_keys
+xkb_symbols "level3_rwin_switch" {
+    key <RWIN> {
+        type[Group1]="ONE_LEVEL",
+        symbols[Group1] = [ ISO_Level3_Shift ]
+    };
+    include "level3(modifier_mapping)"
+};
+
+
 
 // Meta is mapped to second level of Alt keys + LALT on overlay1 is LCTL
 partial modifier_keys
@@ -126,25 +179,7 @@ xkb_symbols "meta_alt_with_overlay" {
     //  modifier_map Mod4 {};
 };
 
-///////////////////////////////////////////////////////////////////////////////
-// CapsLock overlay1
-partial modifier_keys
-xkb_symbols "capslock_overlay1" {
-    replace key <CAPS> {
-        [ NoSymbol ],
-        actions = [ SetControls(controls=overlay1) ]
-    };
-    modifier_map Mod5 { <CAPS> };
-};
 
-partial modifier_keys
-xkb_symbols "capslock_level3shift" {
-    key <CAPS> {
-        type[Group1]="ONE_LEVEL"
-        , symbols[Group1] = [ ISO_Level3_Shift ]
-    };
-    include "level3(modifier_mapping)"
-};
 ///////////////////////////////////////////////////////////////////////////////
 // FnKeys
 partial alphanumeric_keys

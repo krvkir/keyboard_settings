@@ -6,11 +6,13 @@ xkb_keymap {
         include "pc+us+ru(winkeys):2+inet(evdev)"
         include "pc(fnkeys)"
 
-        // include "pc(capslock_level3shift)"
-        include "pc(capslock_overlay1)"
+        // include "pc(level3_caps_switch)"
+        include "pc(overlay1_caps)"
 
         include "group(ctrl_shift_toggle)"
         // include "group(alt_shift_toggle)"
+
+        // include "pc(level3_win_switch)"
     };
-    xkb_geometry  { include "pc(pc105)"	};
+    xkb_geometry  { include "custom(thinkpad_s1)"	};
 };

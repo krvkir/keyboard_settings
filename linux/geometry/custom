@@ -1,0 +1,152 @@
+xkb_geometry "thinkpad_s1" {
+
+    description= "Thinkpad Yoga S1";
+    width= 330;
+    height= 210;
+
+    shape.cornerRadius= 0.5;
+    shape "NORM" { { [ 18  ,18] } };
+    shape "FUNC" { { [ 15,10] } };
+    shape "ESC"  { { [ 22  ,10] } };
+    shape "DELE"  { { [ 22  ,10] } };
+    shape "BKSP" { { [ 28  ,18] } };
+    shape "TABK" { { [ 28  ,18] } };
+    shape "BKSL" { { [ 18  ,18] } };
+    shape "RTRN" { { [ 32  ,18] } };
+    shape "CAPS" { { [ 33  ,18] } };
+    shape "LFSH" { { [ 42  ,18] } };
+    shape "RTSH" { { [ 42  ,18] } };
+    shape "SPCE" { { [ 94  ,18] } };
+    shape "LCTL" { { [ 23  ,18] } };
+    shape "RCTL" { { [ 15  ,18] } };
+    shape "LALT" { { [ 18  ,18] } };
+    shape "ALGR" { { [ 15  ,18] } };
+    shape "WIN"  { { [ 18  ,18] } };
+    shape "PRSC"  { { [ 15  ,18] } };
+
+    shape "LED"  { cornerRadius= 0.5, { [  1,  3 ] } };
+
+    indicator.onColor= "green";
+    indicator.offColor= "green30";
+    indicator.top= 37;
+    indicator.shape= "LED";
+    indicator "Num Lock"     { left= 138; };
+    indicator "Caps Lock"    { left= 150; };
+    indicator "Scroll Lock"  { left= 162; };
+    text.top= 33;
+    text.color= "black";
+    text "NumLockLabel"		{ left= 140; text="Num\nLock"; };
+    text "CapsLockLabel"	{ left= 152; text="Caps\nLock"; };
+    text "ScrollLockLabel"	{ left= 164; text="Scroll\nLock"; };
+
+    section.left= 19;
+    row.left= 1;
+    key.shape= "NORM";
+    key.gap=  1;
+
+    section "Function" {
+        top= 32;
+        key.shape= "FUNC";
+        key.color= "grey20";
+        // row {
+        //     top= 1;
+        //     left= 163.8;
+        //     keys {  { <MENU>, color="white" }, <PRSC>, <NMLK>, <PAUS>,
+        //             { <INS>, 3, color="white" },
+        //             { <HOME>, color="white"}, <PGUP>
+        //          };
+        // };
+        row {
+            top= 14;
+            keys {  { <ESC>, "ESC" },
+                    { <FK01> }, { <FK02>, color="white" }, <FK03>, { <FK04>, color="white" },
+                    { <FK05>, 3 }, { <FK06>, color="white" }, <FK07>, <FK08>,
+                    { <FK09>, 3, color="white" }, <FK10>, { <FK11>, color="white" }, { <FK12>, color="white" },
+                    { <HOME>, 3 }, <END>, { <DELE>, "DELE" }
+                 };
+        };
+    }; // End of "Function" section
+
+    section "Alpha" {
+        top= 60;
+        row {
+            top= 1;
+            keys { <TLDE>, <AE01>, <AE02>, <AE03>, <AE04>,
+                   <AE05>, <AE06>,
+                   { <AE07>, color="grey20" },
+                   { <AE08>, color="grey20" },
+                   { <AE09>, color="grey20" },
+                   { <AE10>, color="grey20" }, <AE11>, <AE12>,
+                   { <BKSP>, "BKSP" }
+                 };
+        };
+        row {
+            top= 20;
+            keys { { <TAB>, "TABK" },
+                   <AD01>, <AD02>, <AD03>, <AD04>, <AD05>,
+                   <AD06>,
+                   { <AD07>, color="grey20" },
+                   { <AD08>, color="grey20" },
+                   { <AD09>, color="grey20" },
+                   { <AD10>, color="grey20" },
+                   <AD11>, <AD12>, { <BKSL>, "BKSL" }
+                 };
+        };
+        row {
+            top= 39;
+            keys { { <CAPS>, "CAPS" },
+                   <AC01>, <AC02>, <AC03>, <AC04>, <AC05>,
+                   <AC06>,
+                   { <AC07>, color="grey20" },
+                   { <AC08>, color="grey20" },
+                   { <AC09>, color="grey20" },
+                   { <AC10>, color="grey20" },
+                   <AC11>, { <RTRN>, "RTRN" }
+                 };
+        };
+        row {
+            top= 58;
+            keys { { <LFSH>, "LFSH" },
+                   <AB01>, <AB02>, <AB03>, <AB04>, <AB05>,
+                   <AB06>,
+                   { <AB07>, color="grey20" }, <AB08>,
+                   { <AB09>, color="grey20" },
+                   { <AB10>, color="grey20" },
+                   { <RTSH>, "RTSH" }
+                 };
+        };
+        row {
+            top= 77;
+            key.shape= "WIN";
+            keys { { <FN>, color="grey20" },
+                   { <LCTL>, "LCTL" },
+                   <LWIN>,
+                   { <LALT>, "LALT" },
+                   { <SPCE>, "SPCE" },
+                   { <ALGR>, "ALGR" },
+                   { <PRSC>, "PRSC" },
+                   { <RCTL>, "RCTL" }
+                 };
+        };
+    }; // End of "Alpha" section
+
+    section "Editing" {
+        top= 136;
+        left= 244;
+        key.shape= "FUNC";
+        key.color= "grey20";
+        key.gap = 2;
+        row {
+            top= 1;
+            keys { <PGUP>, <UP>, <PGDN> };
+        };
+        row {
+            top= 12;
+            keys { <LEFT>, <DOWN>, <RGHT> };
+        };
+    }; // End of "Editing" section
+
+    alias <AC00> = <CAPS>;
+    alias <AA00> = <LCTL>;
+
+}; // End of "thinkpad_s1" geometry
