@@ -66,3 +66,8 @@ On linux it is implemented via xkb config files. On windows it is an autohotkey 
  Because overlays work in java swing apps like Freeplane and level 3 symbols doesn't.
 
  Actually level 3 actions work in freeplane's main interface but doesn't work in node editors (neither in inline one nor in dialog one). And it is critical to have them work there.
+* References
+
+Some good resources on XKB:
+- [[https://www.x.org/archive/X11R7.5/doc/input/XKB-Enhancing.html]]
+- [[https://www.x.org/releases/X11R7.7/doc/kbproto/xkbproto.html]]
