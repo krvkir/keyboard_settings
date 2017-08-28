@@ -1,27 +1,34 @@
 SetCapsLockState, AlwaysOff
 
+; Two shifts change language
+LShift & RShift::Send {Alt down}{Shift down}{Shift up}{Alt up}
+RShift & LShift::Send {Alt down}{Shift down}{Shift up}{Alt up}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Movement/Edition (with capslock) ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-Capslock & q::Send !^{Left}
-Capslock & w::Send !^{Right}
-Capslock & 1::Send !^{1}
-Capslock & 2::Send !^{2}
-Capslock & 3::Send !^{3}
-Capslock & 4::Send !^{4}
+Capslock & 1::Send {F1}
+Capslock & 2::Send {F2}
+Capslock & 3::Send {F3}
+Capslock & 4::Send {F4}
+Capslock & 5::Send {F5}
+Capslock & 6::Send {F6}
+Capslock & 7::Send {F7}
+Capslock & 8::Send {F8}
+Capslock & 9::Send {F9}
+Capslock & 0::Send {F10}
 
+CapsLock & u::Send ^{Left}
 CapsLock & i::Send {Up}
+CapsLock & o::Send ^{Right}
 CapsLock & k::Send {Down}
 CapsLock & j::Send {Left}
 CapsLock & l::Send {Right}
 CapsLock & p::Send {PgUp}
 CapsLock & `;::Send {PgDn}
-
-CapsLock & u::Send ^{Left}
-CapsLock & o::Send ^{Right}
-
 CapsLock & ,::Send {Home}
 CapsLock & .::Send {End}
+
 CapsLock & d::Send {Backspace}
 CapsLock & f::Send {Delete}
 CapsLock & e::Send ^{Backspace}
@@ -30,15 +37,17 @@ CapsLock & r::Send ^{Delete}
 CapsLock & h::Send {Enter}
 CapsLock & g::Send {Esc}
 
-CapsLock & z::Send ^{z}
-CapsLock & x::Send ^{x}
-CapsLock & c::Send ^{c}
-CapsLock & v::Send ^{v}
+CapsLock & q::Send {(}
+CapsLock & w::Send {)}
 
-; CapsLock & t::Send {(}
-; CapsLock & y::Send {)}
-; CapsLock & b::Send {,}
-; CapsLock & n::Send {.}
+CapsLock & a::Send {,}
+CapsLock & s::Send {.}
+
+CapsLock & z::Send {_}
+CapsLock & x::Send {-}
+CapsLock & c::Send {=}
+CapsLock & v::Send {+}
+CapsLock & b::Send {\}
 
 #If GetKeyState("Shift")
 CapsLock & i::Send +{Up}
