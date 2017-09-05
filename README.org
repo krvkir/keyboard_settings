@@ -1,5 +1,8 @@
 #+TITLE: Keyboard settings
 
+#+CAPTION: Extra layout enabled by CapsLock key
+[[./layout.png]]
+
 * What is it
 
 Keyboard settings bringing hardly-reachable keys to your home row (or as close to it as possible):

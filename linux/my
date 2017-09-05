@@ -9,7 +9,8 @@ xkb_keymap {
         // include "pc(level3_caps_switch)"
         include "pc(overlay1_caps)"
 
-        include "group(ctrl_shift_toggle)"
+        include "group(shifts_toggle)"
+        // include "group(ctrl_shift_toggle)"
         // include "group(alt_shift_toggle)"
 
         // include "pc(level3_win_switch)"
