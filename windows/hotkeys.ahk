@@ -37,17 +37,12 @@ CapsLock & r::Send ^{Delete}
 CapsLock & h::Send {Enter}
 CapsLock & g::Send {Esc}
 
-CapsLock & q::Send {(}
-CapsLock & w::Send {)}
+CapsLock & t::Send {(}
+CapsLock & y::Send {)}
 
-CapsLock & a::Send {,}
-CapsLock & s::Send {.}
+CapsLock & b::Send {`[}
+CapsLock & n::Send {`]}
 
-CapsLock & z::Send {_}
-CapsLock & x::Send {-}
-CapsLock & c::Send {=}
-CapsLock & v::Send {+}
-CapsLock & b::Send {\}
 
 #If GetKeyState("Shift")
 CapsLock & i::Send +{Up}
@@ -65,6 +60,13 @@ CapsLock & f::Send +{Delete}
 
 CapsLock & h::Send +{Enter}
 CapsLock & g::Send +{Esc}
+
+; CapsLock & t::Send {`\}
+; CapsLock & y::Send {`/}
+
+; CapsLock & b::Send {`{}
+; CapsLock & n::Send {`}}
+
 #If
 
 #If GetKeyState("Alt")
