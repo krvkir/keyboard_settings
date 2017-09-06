@@ -16,19 +16,19 @@ Works on Linux and Windows.
 
 * Why bother
 
-To forget about moving hands away from the home row every time you need to do something besided character input (which is quite often: move to the next line, fix a typo, even go out of insert mode in your favorite editor).
+To forget about moving hands away from the home row every time you need to do something besides character input (which is quite often: move to the next line, fix a typo, even go out of insert mode in your favourite editor).
 
 Of cause, one can (and should) use a good editor which takes these problems off. But hey, isn't it cool to have a minimal set of features of this good editor in EVERY app? In every web browser, email client, table and text processors, messengers and password keepers, file managers and music players. In every place on your screen which is supposed to input something in.
 
 My own killing examples are Jupyter Notebook web app and Freeplane mindmap utility. I love these apps but they do not and probably never will provide as good keyboard-only user experience as in vim or spacemacs.
 
-Another benifit is that you will never suffer because of non-standard keyboard in your new laptop.
+Another benefit is that you will never suffer because of a non-standard keyboard in your new laptop.
 
 And you can have all these goodies both on Linux and Windows.
 
 Of cause there are disadvantages:
 
-- you will need to get familiar to new settings
+- you will need to get familiar with new settings
 - you will suffer each time you work on someone else's computer for long (but after all, why should you do that?)
 
 * Installation
@@ -40,7 +40,7 @@ On linux:
 
 On windows:
 
-1. install autohotkey
+1. install AutoHotkey
 2. put the script into autorun somehow
 
 * How to use
@@ -62,13 +62,13 @@ Combos:
 * Details
 ** How does it work?
 
-On linux it is implemented via xkb config files. On windows it is an autohotkey script.
+On Linux it is implemented via xkb config files. On Windows it is an [[https://autohotkey.com/][AutoHotkey]] script.
 
 ** Why not to use level 3 symbols instead of overlays?
 
  Because overlays work in java swing apps like Freeplane and level 3 symbols doesn't.
 
- Actually level 3 actions work in freeplane's main interface but doesn't work in node editors (neither in inline one nor in dialog one). And it is critical to have them work there.
+ Actually, level 3 actions work in Freeplane's main interface but don't work in node editors. Neither in inline one nor in dialog one. And it is critical to have them work there.
 * References
 
 Some good resources on XKB:
