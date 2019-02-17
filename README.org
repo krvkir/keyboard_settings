@@ -53,13 +53,19 @@ Simple remappings:
 - ~p~ = page up, ~;~ = page down
 - ~d~ = backspace, ~f~ = delete
 - ~g~ = escape, ~h~ = return
-- ~1~ = F1 ... ~0~ = F9, ~-~ = F10, ~=~ = F12
+- ~1~ = F1 ... ~0~ = F10
+- many useful symbols missing on Cyrillic layout
+- some usable typographical and mathematical symbols: "dash", "plus-minus", "approximately equal", "not equal".
 
 Combos:
 - ~u~ = ctrl-left (usually jump to the beginning of the word), ~o~ = ctrl-right (usually jumps to the end of the word)
 - ~e~ = ctrl-backspace (usually deletes from the cursor to the beginning of the word), ~r~ = ctrl-delete (usually deletes from the cursor to the end of the word)
 
 * Details
+** Why some keys on the overlay behave the same way as on latin layout without an overlay?
+Because, when you're not on latin layout, you need to switch layout to latin one and back to enter, say, quotation sign or square bracket. It's easier to enter those symbols holding the overlay activator and pressing a button you used to press in latin layout.
+** Why to move comma and period from their places to N and M?
+Because I found it inconvenient to have Home and End at N and M. In this case one have to move his index finger from J key and lose his grasp at the home row.
 ** How does it work?
 
 On Linux it is implemented via xkb config files. On Windows it is an [[https://autohotkey.com/][AutoHotkey]] script.
@@ -74,3 +80,6 @@ On Linux it is implemented via xkb config files. On Windows it is an [[https://a
 Some good resources on XKB:
 - [[https://www.x.org/archive/X11R7.5/doc/input/XKB-Enhancing.html]]
 - [[https://www.x.org/releases/X11R7.7/doc/kbproto/xkbproto.html]]
+
+Interesting keyboard layouts:
+- [[https://ilyabirman.net/projects/typography-layout/][Ilya Birman's typography layout]] — for designers and text writers who care about quotes, dashes, and so on.
