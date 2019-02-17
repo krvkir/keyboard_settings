@@ -42,8 +42,8 @@ xkb_symbols "common" {
     key <LSGT> {                    [ slash,         bar  ] };
 
     key <TLDE> {                    [       Cyrillic_io,       Cyrillic_IO, Escape  ] };
-    key <AD01> { overlay1 = <FK23>, [   Cyrillic_shorti,   Cyrillic_SHORTI  ] };
-    key <AD02> { overlay1 = <FK24>, [      Cyrillic_tse,      Cyrillic_TSE, XF86Close  ] };
+    key <AD01> {                    [   Cyrillic_shorti,   Cyrillic_SHORTI  ] };
+    key <AD02> {                    [      Cyrillic_tse,      Cyrillic_TSE, XF86Close  ] };
     key <AD03> { overlay1 = <CBKS>, [        Cyrillic_u,        Cyrillic_U  ] };
     key <AD04> { overlay1 = <CDEL>, [       Cyrillic_ka,       Cyrillic_KA  ] };
     key <AD05> {                    [       Cyrillic_ie,       Cyrillic_IE  ] };
@@ -67,10 +67,10 @@ xkb_symbols "common" {
     key <AC10> { overlay1 = <PGDN>, [      Cyrillic_zhe,      Cyrillic_ZHE ] };
     key <AC11> {                    [        Cyrillic_e,        Cyrillic_E  ] };
 
-    key <AB01> { overlay1 = <UNDO>, [       Cyrillic_ya,       Cyrillic_YA  ] };
-    key <AB02> { overlay1 = <CUT>,  [      Cyrillic_che,      Cyrillic_CHE  ] };
-    key <AB03> { overlay1 = <COPY>, [       Cyrillic_es,       Cyrillic_ES  ] };
-    key <AB04> { overlay1 = <PAST>, [       Cyrillic_em,       Cyrillic_EM  ] };
+    key <AB01> {                    [       Cyrillic_ya,       Cyrillic_YA  ] };
+    key <AB02> {                    [      Cyrillic_che,      Cyrillic_CHE  ] };
+    key <AB03> {                    [       Cyrillic_es,       Cyrillic_ES  ] };
+    key <AB04> {                    [       Cyrillic_em,       Cyrillic_EM  ] };
     key <AB05> {                    [        Cyrillic_i,        Cyrillic_I  ] };
     key <AB06> {                    [       Cyrillic_te,       Cyrillic_TE  ] };
     key <AB07> {                    [ Cyrillic_softsign, Cyrillic_SOFTSIGN  ] };

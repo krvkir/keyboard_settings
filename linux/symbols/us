@@ -17,8 +17,8 @@ xkb_symbols "basic" {
     key <AE11> { overlay1 = <FK11>,	[     minus,	underscore		]	};
     key <AE12> { overlay1 = <FK12>,	[     equal,	plus			]	};
 
-    key <AD01> { overlay1 = <FK13>,	[	  q,	Q	]	};
-    key <AD02> { overlay1 = <FK14>,	[	  w,	W,	XF86Close	]	};
+    key <AD01> {                   	[	  q,	Q	]	};
+    key <AD02> {                   	[	  w,	W,	XF86Close	]	};
     key <AD03> { overlay1 = <CBKS>, [	  e,	E	]	};
     key <AD04> { overlay1 = <CDEL>, [	  r,	R	]	};
     key <AD05> {                    [	  t,	T ]	};
@@ -30,8 +30,8 @@ xkb_symbols "basic" {
     key <AD11> { overlay1 = <FK23>,	[ bracketleft,	braceleft		]	};
     key <AD12> { overlay1 = <FK24>,	[ bracketright,	braceright		]	};
 
-    key <AC01> { overlay1 = <I227>,	[	  a,	A	]	};
-    key <AC02> { overlay1 = <I228>,	[	  s,	S,	XF86Save	]	};
+    key <AC01> {                   	[	  a,	A	]	};
+    key <AC02> {                   	[	  s,	S,	XF86Save	]	};
     key <AC03> { overlay1 = <BKSP>,	[	  d,	D ]	};
     key <AC04> { overlay1 = <DELE>,	[	  f,	F	]	};
     key <AC05> { overlay1 = <ESC>,	[	  g,	G ] };
@@ -42,10 +42,10 @@ xkb_symbols "basic" {
     key <AC10> { overlay1 = <PGDN>,	[ semicolon,	colon	]	};
     key <AC11> {	                  [ apostrophe,	quotedbl		]	};
 
-    key <AB01> { overlay1 = <UNDO>,	[	  z,	Z ]	};
-    key <AB02> { overlay1 = <CUT>,	[	  x,	X	]	};
-    key <AB03> { overlay1 = <COPY>,	[	  c,	C	]	};
-    key <AB04> { overlay1 = <PAST>,	[	  v,	V	]	};
+    key <AB01> {                   	[	  z,	Z ]	};
+    key <AB02> {                    [	  x,	X	]	};
+    key <AB03> {                   	[	  c,	C	]	};
+    key <AB04> {                   	[	  v,	V	]	};
     key <AB05> {	                  [	  b,	B	]	};
     key <AB06> {	                  [	  n,	N	]	};
     key <AB07> {	                  [	  m,	M	]	};
