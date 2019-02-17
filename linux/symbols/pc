@@ -53,8 +53,8 @@ xkb_symbols "pc105" {
     key <V8>   {actions=[ RedirectKey(key=<FK08>)]};
     key <V9>   {actions=[ RedirectKey(key=<FK09>)]};
     key <V0>   {actions=[ RedirectKey(key=<FK10>)]};
-    key <VMIN> {actions=[ RedirectKey(key=<FK11>)]};
-    key <VEQU> {actions=[ RedirectKey(key=<FK12>)]};
+    key <VMIN> {[emdash, approxeq]};
+    key <VEQU> {[notequal, plusminus]};
     // First row -- left side
     key <VQ>   {[q,	Q]};
     key <VW>   {actions=[ RedirectKey(key=<PGUP>)]};
