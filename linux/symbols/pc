@@ -13,6 +13,7 @@ xkb_symbols "pc105" {
     include "srvr_ctrl(fkey2vt)"
     include "pc(editing)"
     include "keypad(x11)"
+    include "pc(virtualkeys)"
 
     key <BKSP> { [ BackSpace, BackSpace ] };
 
@@ -33,7 +34,24 @@ xkb_symbols "pc105" {
     key <COMP> { [ Super_R ] };
     key <PRSC> { [ Super_R ] };
 
-    // Virtual keys
+    // Modifier mappings
+    modifier_map Shift { Shift_L, Shift_R };
+    modifier_map Lock { Caps_Lock };
+    modifier_map Control{ Control_L, Control_R };
+    key <LALT> { [ Alt_L, Meta_L ] };
+    key <RALT> { [ Alt_R, Meta_R ] };
+    modifier_map Mod1 { Alt_L, Alt_R, Meta_L, Meta_R };
+    modifier_map Mod2 { Num_Lock };
+    modifier_map Mod4 { Super_L, Super_R };
+
+    key <OUTP> { [ XF86Display ] };
+    key <KITG> { [ XF86KbdLightOnOff ] };
+    key <KIDN> { [ XF86KbdBrightnessDown ] };
+    key <KIUP> { [ XF86KbdBrightnessUp ] };
+};
+
+hidden partial alphanumeric_keys
+xkb_symbols "virtualkeys" {
     // Numbers row
     // ... left side
     key <VGRA> {[grave, asciitilde, Escape]};
@@ -92,33 +110,18 @@ xkb_symbols "pc105" {
     key <VCOM> {actions=[ RedirectKey(key=<HOME>)]};
     key <VPER> {actions=[ RedirectKey(key=<END>)]};
     key <VSLA> {[ slash, question, XF86Search ] };
-
-    // Modifier mappings
-    modifier_map Shift { Shift_L, Shift_R };
-    modifier_map Lock { Caps_Lock };
-    modifier_map Control{ Control_L, Control_R };
-    key <LALT> { [ Alt_L, Meta_L ] };
-    key <RALT> { [ Alt_R, Meta_R ] };
-    modifier_map Mod1 { Alt_L, Alt_R, Meta_L, Meta_R };
-    modifier_map Mod2 { Num_Lock };
-    modifier_map Mod4 { Super_L, Super_R };
-
-    key <OUTP> { [ XF86Display ] };
-    key <KITG> { [ XF86KbdLightOnOff ] };
-    key <KIDN> { [ XF86KbdBrightnessDown ] };
-    key <KIUP> { [ XF86KbdBrightnessUp ] };
 };
 
 hidden partial alphanumeric_keys
 xkb_symbols "editing" {
     key <PRSC> {
-    type= "PC_ALT_LEVEL2",
-    symbols[Group1]= [ Print, Sys_Req ]
+        type= "PC_ALT_LEVEL2",
+        symbols[Group1]= [ Print, Sys_Req ]
     };
     key <SCLK> { [ Scroll_Lock ] };
     key <PAUS> {
-    type= "PC_CONTROL_LEVEL2",
-    symbols[Group1]= [ Pause, Break ]
+        type= "PC_CONTROL_LEVEL2",
+        symbols[Group1]= [ Pause, Break ]
     };
     key <INS> { [ Insert ] };
     key <HOME> { [ Home ] };
@@ -139,8 +142,8 @@ xkb_symbols "editing" {
 partial modifier_keys
 xkb_symbols "overlay1_caps" {
     replace key <CAPS> {
-    [ NoSymbol ],
-    actions = [ SetControls(controls=overlay1) ]
+        [ NoSymbol ],
+        actions = [ SetControls(controls=overlay1) ]
     };
     modifier_map Mod5 { <CAPS> };
 };
@@ -152,9 +155,8 @@ xkb_symbols "overlay1_caps" {
 partial modifier_keys
 xkb_symbols "level3_return_switch" {
     key <RTRN> {
-    type[Group1]="ONE_LEVEL", 
-    symbols[Group1] = [ ISO_Level3_Shift ]
+        type[Group1]="ONE_LEVEL", 
+        symbols[Group1] = [ ISO_Level3_Shift ]
     };
-    // modifier_map <RTRN> { <RTRN> };
-    // include "level3(modifier_mapping)"
+    include "level3(modifier_mapping)"
 };
