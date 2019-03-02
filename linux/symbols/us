@@ -17,9 +17,9 @@ xkb_symbols "basic" {
     key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
     key <AE12> { overlay1 = <VEQU>, [ equal, plus ] };
 
-    key <AD01> { overlay1 = <VQ>, [ q, Q, 1 ] };
-    key <AD02> { overlay1 = <VW>, [ w, W, 2 ] };
-    key <AD03> { overlay1 = <VE>, [ e, E, 3 ] };
+    key <AD01> { overlay1 = <VQ>, [ q, Q ] };
+    key <AD02> { overlay1 = <VW>, [ w, W ] };
+    key <AD03> { overlay1 = <VE>, [ e, E ] };
     key <AD04> { overlay1 = <VR>, [ r, R ] };
     key <AD05> { overlay1 = <VT>, [ t, T ] };
     key <AD06> { overlay1 = <VY>, [ y, Y ] };
@@ -30,9 +30,9 @@ xkb_symbols "basic" {
     key <AD11> { overlay1 = <VLBR>, [ bracketleft, braceleft ] };
     key <AD12> { overlay1 = <VRBR>, [ bracketright, braceright ] };
 
-    key <AC01> { overlay1 = <VA>, [ a, A, 4 ] };
-    key <AC02> { overlay1 = <VS>, [ s, S, 5 ] };
-    key <AC03> { overlay1 = <VD>, [ d, D, 6 ] };
+    key <AC01> { overlay1 = <VA>, [ a, A ] };
+    key <AC02> { overlay1 = <VS>, [ s, S ] };
+    key <AC03> { overlay1 = <VD>, [ d, D ] };
     key <AC04> { overlay1 = <VF>, [ f, F ] };
     key <AC05> { overlay1 = <VG>, [ g, G ] };
     key <AC06> { overlay1 = <VH>, [ h, H ] };
@@ -42,10 +42,10 @@ xkb_symbols "basic" {
     key <AC10> { overlay1 = <VSEM>, [ semicolon, colon ] };
     key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl ] };
 
-    key <AB01> { overlay1 = <VZ>, [ z, Z, 7 ] };
-    key <AB02> { overlay1 = <VX>, [ x, X, 8 ] };
-    key <AB03> { overlay1 = <VC>, [ c, C, 9 ] };
-    key <AB04> { overlay1 = <VV>, [ v, V, 0 ] };
+    key <AB01> { overlay1 = <VZ>, [ z, Z ] };
+    key <AB02> { overlay1 = <VX>, [ x, X ] };
+    key <AB03> { overlay1 = <VC>, [ c, C ] };
+    key <AB04> { overlay1 = <VV>, [ v, V ] };
     key <AB05> { overlay1 = <VB>, [ b, B ] };
     key <AB06> { overlay1 = <VN>, [ n, N ] };
     key <AB07> { overlay1 = <VM>, [ m, M ] };

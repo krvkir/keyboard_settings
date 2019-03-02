@@ -15,7 +15,6 @@ xkb_symbols "pc105" {
     include "keypad(x11)"
     include "pc(virtualkeys)"
     include "pc(overlay1_switch)"
-    include "pc(level3_switch)"
 
     key <BKSP> { [ BackSpace, BackSpace ] };
 
@@ -137,24 +136,10 @@ xkb_symbols "editing" {
     key <RGHT> { [ Right ] };
 };
 
-///////////////////////////////////////////////////////////////////////////////
-// Overlay1
-
 partial modifier_keys
 xkb_symbols "overlay1_switch" {
     replace key <CAPS> {
         [ NoSymbol ],
         actions = [ SetControls(controls=overlay1) ]
     };
-};
-
-
-///////////////////////////////////////////////////////////////////////////////
-// Level3
-
-partial modifier_keys
-xkb_symbols "level3_switch" {
-    replace key <RTRN> { [ ISO_Level3_Shift ] };
-    // modifier_map Mod5 { ISO_Level3_Shift };
-    include "level3(modifier_mapping)"
 };
