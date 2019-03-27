@@ -236,6 +236,10 @@ default xkb_keycodes "evdev" {
     // <I242> = 242;	// #define KEY_SAVE 234
     // <I243> = 243;	// #define KEY_DOCUMENTS 235
 
+    // Extra keys for ThinkPad Yoga S1
+    <VLDN> = 122;
+    <VLUP> = 123;
+
     // Fake keycodes for virtual keys
     // (some keycodes don't work, so they're skipped)
     <VGRA> = 152;

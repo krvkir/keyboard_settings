@@ -134,6 +134,9 @@ xkb_symbols "editing" {
     key <LEFT> { [ Left ] };
     key <DOWN> { [ Down ] };
     key <RGHT> { [ Right ] };
+
+    key <VLUP> { [ Next ] }; 
+    key <VLDN> { [ Prior ] }; 
 };
 
 partial modifier_keys
