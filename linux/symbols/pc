@@ -56,7 +56,7 @@ xkb_symbols "pc105" {
     key <VMIN> {[emdash, approxeq]};
     key <VEQU> {[notequal, plusminus]};
     // First row -- left side
-    key <VQ>   {[q,	Q]};
+    key <VQ>   {[implies,	ifonlyif]};
     key <VW>   {actions=[ RedirectKey(key=<PGUP>)]};
     key <VE>   {actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super)]};
     key <VR>   {actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super)]};
@@ -70,7 +70,7 @@ xkb_symbols "pc105" {
     key <VLBR> {[ bracketleft,  braceleft ]};
     key <VRBR> {[ bracketright, braceright ]};
     // Second row -- left side
-    key <VA>   {[a,	A]};
+    key <VA>   {[0x1002200,	0x1002203]}; // "there are any", "there exists"
     key <VS>   {actions=[ RedirectKey(key=<PGDN>)]};
     key <VD>   {actions=[ RedirectKey(key=<BKSP>)]};
     key <VF>   {actions=[ RedirectKey(key=<DELE>)]};
@@ -83,11 +83,11 @@ xkb_symbols "pc105" {
     key <VSEM> {[ semicolon,	colon	]	};
     key <VAPO> {[ apostrophe,	quotedbl		]	};
     // Third row -- left side
-    key <VZ>   {[at]};
+    key <VZ>   {[at, notsign]};
     key <VX>   {[numbersign]};
-    key <VC>   {[dollar]};
-    key <VV>   {[asciicircum]};
-    key <VB>   {[ampersand]};
+    key <VC>   {[dollar, rightarrow]};
+    key <VV>   {[asciicircum, partialderivative]};
+    key <VB>   {[ampersand, infinity]};
     // right side
     key <VN>   {[comma,	less]};
     key <VM>   {[period, greater]};
