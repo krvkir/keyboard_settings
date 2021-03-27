@@ -5,31 +5,37 @@ xkb_symbols "pc105" {
 
     // The extra key on many European keyboards:
     key <LSGT> { [ less, greater, bar, brokenbar ] };
-
+    
     // The following keys are common to all layouts.
     key <BKSL> { [ backslash, bar ] };
-    key <SPCE> { overlay1=<I229>, [ space ] };
+    key <SPCE> { [ space ] };
 
     include "srvr_ctrl(fkey2vt)"
     include "pc(editing)"
     include "keypad(x11)"
     include "pc(virtualkeys)"
     include "pc(overlay1_switch)"
+    // include "pc(overlay2_switch)"
 
     key <BKSP> { [ BackSpace, BackSpace ] };
 
-    key <TAB> { [ Tab, ISO_Left_Tab ] };
+    // required for capslock+tab -> ctrl+tab
+    key <TAB> { overlay1 = <VTAB>, [ Tab, ISO_Left_Tab ] };
     key <RTRN> { [ Return ] };
 
-    // key <CAPS> { [ Return ] };
+    // key <CAPS> { [ ISO_Level3_Shift ] };
     key <NMLK> { [ Num_Lock ] };
 
     key <LFSH> { [ Shift_L ] };
-    key <LCTL> { [ Control_L ] };
-    key <LWIN> { [ Super_L ] };
-
     key <RTSH> { [ Shift_R ] };
+
+    key <LCTL> { [ Control_L ] };
     key <RCTL> { [ Control_R ] };
+
+    key <LALT> { [ Alt_L, Meta_L ] };
+    key <RALT> { [ Alt_R, Meta_R ] };
+
+    key <LWIN> { [ Super_L ] };
     key <RWIN> { [ Super_R ] };
     key <MENU> { [ Super_R ] };
     key <COMP> { [ Super_R ] };
@@ -38,11 +44,10 @@ xkb_symbols "pc105" {
     // Modifier mappings
     modifier_map Shift { Shift_L, Shift_R };
     modifier_map Lock { Caps_Lock };
-    modifier_map Control{ Control_L, Control_R };
-    key <LALT> { [ Alt_L, Meta_L ] };
-    key <RALT> { [ Alt_R, Meta_R ] };
+    modifier_map Control { Control_L, Control_R };
     modifier_map Mod1 { Alt_L, Alt_R, Meta_L, Meta_R };
     modifier_map Mod4 { Super_L, Super_R };
+    modifier_map Mod5 { ISO_Level3_Shift };
 
     key <OUTP> { [ XF86Display ] };
     key <KITG> { [ XF86KbdLightOnOff ] };
@@ -52,6 +57,7 @@ xkb_symbols "pc105" {
 
 hidden partial alphanumeric_keys
 xkb_symbols "virtualkeys" {
+
     // Numbers row
     // ... left side
     key <VGRA> {[grave, asciitilde, Escape]};
@@ -70,11 +76,12 @@ xkb_symbols "virtualkeys" {
     key <VEQU> {[notequal, plusminus]};
     // First row
     // ... left side
-    key <VQ> {[implies, ifonlyif]};
+    key <VTAB> {actions=[ RedirectKey(key=<TAB>, modifiers=Control, clearmods=Super) ] };
+    key <VQ> {[numbersign, at]};
     key <VW> {actions=[ RedirectKey(key=<PGUP>)]};
     key <VE> {actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super)]};
     key <VR> {actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super)]};
-    key <VT> {[t, T]};
+    key <VT> {actions=[ RedirectKey(key=<AD05>, modifiers=Control, clearmods=Super)]};
     // ... right side
     key <VY> {[y, Y]};
     key <VU> {actions=[ RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super)]};
@@ -85,7 +92,7 @@ xkb_symbols "virtualkeys" {
     key <VRBR> {[ bracketright, braceright ]};
     // Second row
     // ... left side
-    key <VA> {[0x1002200, 0x1002203]}; // "there are any", "there exists"
+    key <VA> {actions=[ RedirectKey(key=<AC01>, modifiers=Control, clearmods=Super)]};
     key <VS> {actions=[ RedirectKey(key=<PGDN>)]};
     key <VD> {actions=[ RedirectKey(key=<BKSP>)]};
     key <VF> {actions=[ RedirectKey(key=<DELE>)]};
@@ -99,11 +106,11 @@ xkb_symbols "virtualkeys" {
     key <VAPO> {[ apostrophe, quotedbl ] };
     // Third row
     // ... left side
-    key <VZ> {[at, notsign]};
-    key <VX> {[numbersign]};
-    key <VC> {[dollar, rightarrow]};
-    key <VV> {[asciicircum, partialderivative]};
-    key <VB> {[ampersand, infinity]};
+    key <VZ> {actions=[ RedirectKey(key=<AB01>, modifiers=Control, clearmods=Super)]};
+    key <VX> {actions=[ RedirectKey(key=<AB02>, modifiers=Control, clearmods=Super)]};
+    key <VC> {actions=[ RedirectKey(key=<AB03>, modifiers=Control, clearmods=Super)]};
+    key <VV> {actions=[ RedirectKey(key=<AB04>, modifiers=Control, clearmods=Super)]};
+    key <VB> {actions=[ RedirectKey(key=<AB05>, modifiers=Control, clearmods=Super)]};
     // ... right side
     key <VN> {[comma, less]};
     key <VM> {[period, greater]};
@@ -135,14 +142,22 @@ xkb_symbols "editing" {
     key <DOWN> { [ Down ] };
     key <RGHT> { [ Right ] };
 
-    key <VLUP> { [ Next ] }; 
-    key <VLDN> { [ Prior ] }; 
+    key <VLUP> { [ Next ] };
+    key <VLDN> { [ Prior ] };
 };
 
 partial modifier_keys
 xkb_symbols "overlay1_switch" {
     replace key <CAPS> {
-        [ NoSymbol ],
+        [ ISO_Level3_Shift ],
         actions = [ SetControls(controls=overlay1) ]
+    };
+};
+
+partial modifier_keys
+xkb_symbols "overlay2_switch" {
+    replace key <LALT> {
+        [ NoSymbol ]
+        , actions = [ SetControls(controls=overlay2) ]
     };
 };

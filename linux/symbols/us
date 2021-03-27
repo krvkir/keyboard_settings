@@ -1,5 +1,6 @@
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
+    key.type = "THREE_LEVEL";
 
     name[Group1]= "English (US)";
 
@@ -42,8 +43,8 @@ xkb_symbols "basic" {
     key <AC10> { overlay1 = <VSEM>, [ semicolon, colon ] };
     key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl ] };
 
-    key <AB01> { overlay1 = <VZ>, [ z, Z ] };
-    key <AB02> { overlay1 = <VX>, [ x, X ] };
+    key <AB01> { overlay1 = <VZ>, [ z, Z, numbersign ] };
+    key <AB02> { overlay1 = <VX>, [ x, X, at ] };
     key <AB03> { overlay1 = <VC>, [ c, C ] };
     key <AB04> { overlay1 = <VV>, [ v, V ] };
     key <AB05> { overlay1 = <VB>, [ b, B ] };
