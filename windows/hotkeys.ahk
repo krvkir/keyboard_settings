@@ -1,8 +1,30 @@
 SetCapsLockState, AlwaysOff
+AppsKey::LWin
 
 ; Two shifts change language
 LShift & RShift::Send {Alt down}{Shift down}{Shift up}{Alt up}
 RShift & LShift::Send {Alt down}{Shift down}{Shift up}{Alt up}
+
+; Dashboard - to Win+`
+#`::Send #{Tab}
+
+; Switch (cycle through) workspaces
+#NoEnv
+#Persistent
+Send ^#{Left}
+vDesktop := 1   ; this must match the virtual desktop active when program starts if a sync isn't forced
+return
+
+#Tab::
+if (vDesktop = 2) {
+  vDesktop := 1
+  Send ^#{Left}
+} else {
+  vDesktop := 2
+  SendInput ^#{Right}
+}
+return
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Movement/Edition (with capslock) ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -42,6 +64,10 @@ CapsLock & y::Send {)}
 
 CapsLock & b::Send {`[}
 CapsLock & n::Send {`]}
+
+CapsLock & Enter::Send ^{Enter}
+
+
 
 
 #If GetKeyState("Shift")
@@ -99,13 +125,13 @@ CapsLock & h::Send !{Enter}
 CapsLock & g::Send !{Esc}
 #If
 
+; ; Hardcore mode -- to unlearn the old keys
 ; Esc::return
 ; Backspace::return
 ; Delete::return
 ; Enter::return
 ; ^Enter::return
 ; !Enter::return
-AppsKey::RWin
 
 #IfWinActive ahk_exe chrome.exe
     Shift & 3::Send {#}
