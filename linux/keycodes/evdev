@@ -287,9 +287,9 @@ default xkb_keycodes "evdev" {
     <VB> = 210;
     <VN> = 211;
     <VM> = 212;
-    <VCOM> = 213;
-    <VPER> = 214;
-    <VSLA> = 216;
+    <VCOM> = 214;
+    <VPER> = 216;
+    <VSLA> = 217;
 
     // Modifier keys
     <LVL3> = 92;
