@@ -60,63 +60,63 @@ xkb_symbols "virtualkeys" {
 
     // Numbers row
     // ... left side
-    key <VGRA> {[grave, asciitilde, Escape]};
-    key <V1> {actions=[ RedirectKey(key=<FK01>)]};
-    key <V2> {actions=[ RedirectKey(key=<FK02>)]};
-    key <V3> {actions=[ RedirectKey(key=<FK03>)]};
-    key <V4> {actions=[ RedirectKey(key=<FK04>)]};
-    key <V5> {actions=[ RedirectKey(key=<FK05>)]};
-    key <V6> {actions=[ RedirectKey(key=<FK06>)]};
+    key <VGRA> { [grave, asciitilde, Escape] };
+    key <V1> { actions=[ RedirectKey(key=<FK01>)] };
+    key <V2> { actions=[ RedirectKey(key=<FK02>)] };
+    key <V3> { actions=[ RedirectKey(key=<FK03>)] };
+    key <V4> { actions=[ RedirectKey(key=<FK04>)] };
+    key <V5> { actions=[ RedirectKey(key=<FK05>)] };
+    key <V6> { actions=[ RedirectKey(key=<FK06>)] };
     // ... right side
-    key <V7> {actions=[ RedirectKey(key=<FK07>)]};
-    key <V8> {actions=[ RedirectKey(key=<FK08>)]};
-    key <V9> {actions=[ RedirectKey(key=<FK09>)]};
-    key <V0> {actions=[ RedirectKey(key=<FK10>)]};
-    key <VMIN> {[emdash, approxeq]};
-    key <VEQU> {[notequal, plusminus]};
+    key <V7> { actions=[ RedirectKey(key=<FK07>)] };
+    key <V8> { actions=[ RedirectKey(key=<FK08>)] };
+    key <V9> { actions=[ RedirectKey(key=<FK09>)] };
+    key <V0> { actions=[ RedirectKey(key=<FK10>)] };
+    key <VMIN> { [emdash, approxeq] };
+    key <VEQU> { [notequal, plusminus] };
     // First row
     // ... left side
-    key <VTAB> {actions=[ RedirectKey(key=<TAB>, modifiers=Control, clearmods=Super) ] };
-    key <VQ> {[numbersign, at]};
-    key <VW> {actions=[ RedirectKey(key=<PGUP>)]};
-    key <VE> {actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super)]};
-    key <VR> {actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super)]};
-    key <VT> {actions=[ RedirectKey(key=<AD05>, modifiers=Control, clearmods=Super)]};
+    key <VTAB> { actions=[ RedirectKey(key=<TAB>, modifiers=Control, clearmods=Super) ] };
+    key <VQ> { [numbersign, at] };
+    key <VW> { actions=[ RedirectKey(key=<AD02>, modifiers=Control, clearmods=Super) ]};
+    key <VE> { actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super) ]};
+    key <VR> { actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super) ]};
+    key <VT> { actions=[ RedirectKey(key=<AD05>, modifiers=Control, clearmods=Super) ]};
     // ... right side
-    key <VY> {[y, Y]};
-    key <VU> {actions=[ RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super)]};
-    key <VI> {actions=[ RedirectKey(key=<UP>)]};
-    key <VO> {actions=[ RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super)]};
-    key <VP> {[p, P]};
-    key <VLBR> {[ bracketleft, braceleft ]};
-    key <VRBR> {[ bracketright, braceright ]};
+    key <VY> { actions=[ RedirectKey(key=<PGUP>) ] };
+    key <VU> { actions=[ RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super) ] };
+    key <VI> { actions=[ RedirectKey(key=<UP>) ] };
+    key <VO> { actions=[ RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super) ] };
+    key <VP> { actions=[ RedirectKey(key=<PGDN>) ] };
+    key <VLBR> { [ bracketleft, braceleft ] };
+    key <VRBR> { [ bracketright, braceright ] };
     // Second row
     // ... left side
-    key <VA> {actions=[ RedirectKey(key=<AC01>, modifiers=Control, clearmods=Super)]};
-    key <VS> {actions=[ RedirectKey(key=<PGDN>)]};
-    key <VD> {actions=[ RedirectKey(key=<BKSP>)]};
-    key <VF> {actions=[ RedirectKey(key=<DELE>)]};
-    key <VG> {actions=[ RedirectKey(key=<ESC>)]};
+    key <VA> { actions=[ RedirectKey(key=<AC01>, modifiers=Control, clearmods=Super) ] };
+    key <VS> { actions=[ RedirectKey(key=<AC02>, modifiers=Control, clearmods=Super) ] };
+    key <VD> { actions=[ RedirectKey(key=<BKSP>)] };
+    key <VF> { actions=[ RedirectKey(key=<DELE>)] };
+    key <VG> { actions=[ RedirectKey(key=<ESC>)] };
     // ... right side
     key <VH> {[Return]};
-    key <VJ> {actions=[ RedirectKey(key=<LEFT>)]};
-    key <VK> {actions=[ RedirectKey(key=<DOWN>)]};
-    key <VL> {actions=[ RedirectKey(key=<RGHT>)]};
+    key <VJ> { actions=[ RedirectKey(key=<LEFT>)]};
+    key <VK> { actions=[ RedirectKey(key=<DOWN>)]};
+    key <VL> { actions=[ RedirectKey(key=<RGHT>)]};
     key <VSEM> {[ semicolon, colon ] };
     key <VAPO> {[ apostrophe, quotedbl ] };
     // Third row
     // ... left side
-    key <VZ> {actions=[ RedirectKey(key=<AB01>, modifiers=Control, clearmods=Super)]};
-    key <VX> {actions=[ RedirectKey(key=<AB02>, modifiers=Control, clearmods=Super)]};
-    key <VC> {actions=[ RedirectKey(key=<AB03>, modifiers=Control, clearmods=Super)]};
-    key <VV> {actions=[ RedirectKey(key=<AB04>, modifiers=Control, clearmods=Super)]};
-    key <VB> {actions=[ RedirectKey(key=<AB05>, modifiers=Control, clearmods=Super)]};
+    key <VZ> { actions=[ RedirectKey(key=<AB01>, modifiers=Control, clearmods=Super) ] };
+    key <VX> { actions=[ RedirectKey(key=<AB02>, modifiers=Control, clearmods=Super) ] };
+    key <VC> { actions=[ RedirectKey(key=<AB03>, modifiers=Control, clearmods=Super) ] };
+    key <VV> { actions=[ RedirectKey(key=<AB04>, modifiers=Control, clearmods=Super) ] };
+    key <VB> { actions=[ RedirectKey(key=<AB05>, modifiers=Control, clearmods=Super) ] };
     // ... right side
-    key <VN> {[comma, less]};
-    key <VM> {[period, greater]};
-    key <VCOM> {actions=[ RedirectKey(key=<HOME>)]};
-    key <VPER> {actions=[ RedirectKey(key=<END>)]};
-    key <VSLA> {[ slash, question, XF86Search ] };
+    key <VN> { actions=[ RedirectKey(key=<HOME>)] };
+    key <VM> { actions=[ RedirectKey(key=<END>)] };
+    key <VCOM> { [ comma, less ] } ;
+    key <VPER> { [ period, greater ] };
+    key <VSLA> { [ slash, question, XF86Search ] };
 };
 
 hidden partial alphanumeric_keys
