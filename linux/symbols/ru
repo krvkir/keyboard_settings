@@ -15,7 +15,7 @@ xkb_symbols "winkeys" {
     key <AE08> { overlay1 = <FK08>, [ 8, asterisk ] };
 
     key <AB10> { [ period, comma ] };
-    key <BKSL> { [ backslash, slash ] };
+    // key <BKSL> { [ backslash, slash ] };
 };
 
 // Actions are used because of Freeplane's swing interface library

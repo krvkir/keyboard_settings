@@ -278,6 +278,7 @@ default xkb_keycodes "evdev" {
     <VJ> = 183;
     <VK> = 184;
     <VL> = 185;
+    <VRTN> = 218;
     <VSEM> = 186;
     <VAPO> = 187;
     <VZ> = 188;

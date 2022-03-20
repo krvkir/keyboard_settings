@@ -21,7 +21,7 @@ xkb_symbols "pc105" {
 
     // required for capslock+tab -> ctrl+tab
     key <TAB> { overlay1 = <VTAB>, [ Tab, ISO_Left_Tab ] };
-    key <RTRN> { [ Return ] };
+    key <RTRN> { overlay1 = <VRTN>, [ Return ] };
 
     // key <CAPS> { [ ISO_Level3_Shift ] };
     key <NMLK> { [ Num_Lock ] };
@@ -104,6 +104,7 @@ xkb_symbols "virtualkeys" {
     key <VL> { actions=[ RedirectKey(key=<RGHT>)]};
     key <VSEM> {[ semicolon, colon ] };
     key <VAPO> {[ apostrophe, quotedbl ] };
+    key <VRTN> { actions=[ RedirectKey(key=<RTRN>, modifiers=Control, clearmods=Super) ] };
     // Third row
     // ... left side
     key <VZ> { actions=[ RedirectKey(key=<AB01>, modifiers=Control, clearmods=Super) ] };
