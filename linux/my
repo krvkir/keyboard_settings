@@ -5,7 +5,8 @@ xkb_keymap {
     xkb_types { include "complete+numpad(mac)"	};
     xkb_compat { include "complete"	};
     xkb_symbols {
-        include "pc+us+ru(winkeys):2+inet(evdev)"
+        // include "pc+us+ru(winkeys):2+inet(evdev)"
+        include "pc+us+ru(winkeys):2+am(phonetic):3+inet(evdev)"
         // include "group(shifts_toggle)"
         include "group(alt_shift_toggle)"
         include "group(alt_space_toggle)"
