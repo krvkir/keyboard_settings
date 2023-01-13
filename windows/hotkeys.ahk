@@ -1,9 +1,10 @@
+; ^ is control, + is shift, # is win
+
 SetCapsLockState, AlwaysOff
 AppsKey::LWin
 
-; Two shifts change language
-LShift & RShift::Send {Alt down}{Shift down}{Shift up}{Alt up}
-RShift & LShift::Send {Alt down}{Shift down}{Shift up}{Alt up}
+; Change keyboard layout
+LAlt & space::Send {Alt down}{Shift down}{Shift up}{Alt up}
 
 ; Dashboard - to Win+`
 #`::Send #{Tab}
@@ -40,37 +41,51 @@ Capslock & 8::Send {F8}
 Capslock & 9::Send {F9}
 Capslock & 0::Send {F10}
 
+CapsLock & q::Send {#}
+CapsLock & [::Send {[}
+CapsLock & ]::Send {]}
+
 CapsLock & u::Send ^{Left}
 CapsLock & i::Send {Up}
 CapsLock & o::Send ^{Right}
 CapsLock & k::Send {Down}
 CapsLock & j::Send {Left}
 CapsLock & l::Send {Right}
-CapsLock & p::Send {PgUp}
-CapsLock & `;::Send {PgDn}
-CapsLock & ,::Send {Home}
-CapsLock & .::Send {End}
+CapsLock & w::Send {PgUp}
+CapsLock & s::Send {PgDn}
+CapsLock & n::Send {Home}
+CapsLock & m::Send {End}
+
+CapsLock & ,::Send {,}
+CapsLock & .::Send {.}
+CapsLock & \::Send {\}
+CapsLock & '::Send {'}
+CapsLock & SC027::Send {;}
 
 CapsLock & d::Send {Backspace}
 CapsLock & f::Send {Delete}
 CapsLock & e::Send ^{Backspace}
 CapsLock & r::Send ^{Delete}
+CapsLock & /::Send {/}
+CapsLock & `::Send {``}
 
 CapsLock & h::Send {Enter}
 CapsLock & g::Send {Esc}
 
-CapsLock & t::Send {(}
-CapsLock & y::Send {)}
-
-CapsLock & b::Send {`[}
-CapsLock & n::Send {`]}
+CapsLock & z::Send ^{z}
+CapsLock & x::Send ^{x}
+CapsLock & c::Send ^{c}
+CapsLock & v::Send ^{v}
+CapsLock & t::Send ^{t}
 
 CapsLock & Enter::Send ^{Enter}
 
-
-
-
+;; ... with Shift
 #If GetKeyState("Shift")
+CapsLock & q::Send {@}
+CapsLock & [::Send {`{}
+CapsLock & ]::Send {`}}
+
 CapsLock & i::Send +{Up}
 CapsLock & k::Send +{Down}
 CapsLock & j::Send +{Left}
@@ -79,137 +94,69 @@ CapsLock & l::Send +{Right}
 CapsLock & u::Send ^+{Left}
 CapsLock & o::Send ^+{Right}
 
-CapsLock & ,::Send +{Home}
-CapsLock & .::Send +{End}
+CapsLock & w::Send +{PgUp}
+CapsLock & s::Send +{PgDn}
+CapsLock & n::Send +{Home}
+CapsLock & m::Send +{End}
 CapsLock & d::Send +{Backspace}
 CapsLock & f::Send +{Delete}
+
+CapsLock & ,::Send +{<}
+CapsLock & .::Send +{>}
+CapsLock & \::Send {|}
+CapsLock & SC027::Send {:}
+CapsLock & '::Send {"} ;"
+CapsLock & `::Send {~}
+CapsLock & /::Send {?}
 
 CapsLock & h::Send +{Enter}
 CapsLock & g::Send +{Esc}
 
-; CapsLock & t::Send {`\}
-; CapsLock & y::Send {`/}
-
-; CapsLock & b::Send {`{}
-; CapsLock & n::Send {`}}
-
+CapsLock & z::Send ^+{z}
+CapsLock & x::Send ^+{x}
+CapsLock & c::Send ^+{c}
+CapsLock & v::Send ^+{v}
+CapsLock & t::Send ^+{t}
 #If
 
+;; ... with Alt
 #If GetKeyState("Alt")
 CapsLock & i::Send ^{Up}
 CapsLock & k::Send ^{Down}
 CapsLock & j::Send ^{Left}
 CapsLock & l::Send ^{Right}
 
-CapsLock & ,::Send ^{Home}
-CapsLock & .::Send ^{End}
+CapsLock & w::Send ^{PgUp}
+CapsLock & s::Send ^{PgDn}
+CapsLock & n::Send ^{Home}
+CapsLock & m::Send ^{End}
 CapsLock & d::Send ^{Backspace}
 CapsLock & f::Send ^{Delete}
+
+CapsLock & ,::Send ^{,}
+CapsLock & .::Send ^{.}
 
 CapsLock & h::Send ^{Enter}
 CapsLock & g::Send ^{Esc}
 #If
 
+;; ... with Control
 #If GetKeyState("Ctrl")
 CapsLock & i::Send !{Up}
 CapsLock & k::Send !{Down}
 CapsLock & j::Send !{Left}
 CapsLock & l::Send !{Right}
 
-CapsLock & ,::Send !{Home}
-CapsLock & .::Send !{End}
+CapsLock & w::Send !{PgUp}
+CapsLock & s::Send !{PgDn}
+CapsLock & n::Send !{Home}
+CapsLock & m::Send !{End}
 CapsLock & d::Send !{Backspace}
 CapsLock & f::Send !{Delete}
+
+CapsLock & ,::Send !{,}
+CapsLock & .::Send !{.}
 
 CapsLock & h::Send !{Enter}
 CapsLock & g::Send !{Esc}
 #If
-
-; ; Hardcore mode -- to unlearn the old keys
-; Esc::return
-; Backspace::return
-; Delete::return
-; Enter::return
-; ^Enter::return
-; !Enter::return
-
-#IfWinActive ahk_exe chrome.exe
-    Shift & 3::Send {#}
-#If
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Misc ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-#IfWinActive ahk_class TTOTAL_CMD
-    !y::Send ^s
-#If
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Edition -- emacs version (tricky) ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; *!i::Send {Up}
-; *!k::Send {Down}
-; *!j::Send {Left}
-; *!l::Send {Right}
-
-; #IfWinNotActive ahk_class Emacs
-;     *^!i::Send ^{Up}
-;     *^!k::Send ^{Down}
-;     *^!j::Send ^{Left}
-;     *^!l::Send ^{Right}
-
-;     *!h::Send {Home}
-;     *!+h::Send {End}
-
-;     *!u::Send ^{Left}
-;     *!o::Send ^{Right}
-
-;     !n::Send {PgDn}
-;     !+n::Send {PgUp}
-; #If
-
-; #IfWinNotActive ahk_class Emacs
-;     !d::Send {Backspace}
-;     !f::Send {Delete}
-;     !e::Send ^{Backspace}
-;     !r::Send ^{Delete}
-
-;     ;; Copy and paste
-
-;     !x::Send ^x
-;     !v::Send ^v
-;     !c::Send ^c
-;     !z::Send ^z
-
-;     !Space::Send {Shift Down}
-; #If
-
-; #IfWinNotActive ahk_class Emacs
-; #If GetKeyState("Shift")
-;     +!x::
-; 	Send {Shift Up}
-; 	Send ^x
-;         Send {Right}
-; 	return
-;     +!c::
-; 	Send {Shift Up}
-; 	Send ^c
-;         Send {Right}
-; 	return
-;     +^g::
-; ;        Send {Shift Up}
-; ;        Send {Right}
-; ;        return
-;     +ESC::
-;         Send {Shift Up}
-;         Send {Right}
-;         return
-;     +Backspace::
-; 	Send {Shift Up}
-; 	Send {Backspace}
-; 	return
-;     +Delete::
-; 	Send {Shift Up}
-; 	Send {Delete}
-; 	return
-; #If
