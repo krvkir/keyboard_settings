@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="input", RUN+="/bin/su -l krvkir -c '/home/krvkir/bin/keyboard-setup.sh'"
+
