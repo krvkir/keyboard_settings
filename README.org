@@ -81,10 +81,6 @@ The most controversial change is of course Ctrl in the home row, on the place wh
 
 Because, when you're not on latin layout, you need to switch layout to latin one and back to enter, say, quotation sign or square bracket. It's easier to enter those symbols holding the overlay activator and pressing a button you used to press in latin layout.
 
-** Why to move comma and period from their places to N and M?
-
-Because I found it inconvenient to have Home and End at N and M. In this case one have to move his index finger from J key and lose his grasp at the home row.
-
 ** How does it work?
 
 On Linux it is implemented via xkb config files. I'm idly thinking about rewriting it using Evermap or Xremap to support Wayland.
