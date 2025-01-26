@@ -30,7 +30,7 @@ Another benefit is that you will never suffer because of a non-standard keyboard
 
 And you can have all these goodies both on Linux, Windows and Mac. (Ok, for the last two you have to hack around a bit, but I've done it once for those systems so it's possible, and you have a good working example).
 
-Of cause there are disadvantages:
+Of course there are disadvantages:
 
 - you will need to get familiar with new settings
 - you will suffer a little (but not that much) each time you work on someone else's computer for a long time (but you can do a good deed and supply them with the layout ;)
