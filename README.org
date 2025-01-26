@@ -1,47 +1,54 @@
 #+TITLE: Keyboard settings
 
 #+CAPTION: Extra layout enabled by CapsLock key
-[[./layout.png]]
+[[./layout-2025-01-26.png]]
 
 * What is it
 
 Keyboard settings bringing hardly-reachable keys to your home row (or as close to it as possible):
 
 - arrows, page up/down, home/end
+- control and alt (hello, emacsers)
 - delete, backspace
 - f-keys
+- tilde, backquote, underscore, hyphen and equals
 - even jump-to-next/previous-word and delete-next/previous-word
 
-Works on Linux and Windows.
+Works on Linux. (There are working Windows and Mac versions but they're dated since I don't live in those OS now — commits are welcome!)
 
 * Why bother
 
 To forget about moving hands away from the home row every time you need to do something besides character input (which is quite often: move to the next line, fix a typo, even go out of insert mode in your favourite editor).
 
-Of cause, one can (and should) use a good editor which takes these problems off. But hey, isn't it cool to have a minimal set of features of this good editor in EVERY app? In every web browser, email client, table and text processors, messengers and password keepers, file managers and music players. In every place on your screen which is supposed to input something in.
+Of course, one can (and should) use a good editor which takes these problems off. But hey, isn't it cool to have a minimal set of features of this good editor in EVERY app? In every web browser, email client, table and text processors, messengers and password keepers, file managers and music players. In every place on your screen which is supposed to input something in.
 
-My own killing examples are Jupyter Notebook web app and Freeplane mindmap utility. I love these apps but they do not and probably never will provide as good keyboard-only user experience as in vim or spacemacs.
+My own killer examples are Jupyter Notebook web app and Freeplane mindmap utility. I love these apps but they do not and probably never will provide as good keyboard-only user experience as in vim or spacemacs.
 
-Another benefit is that you will never suffer because of a non-standard keyboard in your new laptop.
+Another benefit is that you will never suffer because of a non-standard keyboard in your new laptop. (Actually, the layout is mostly standard, so even occasional hacking on other people's setups doesn't bring much pain.)
 
-And you can have all these goodies both on Linux and Windows.
+And you can have all these goodies both on Linux, Windows and Mac. (Ok, for the last two you have to hack around a bit, but I've done it once for those systems so it's possible, and you have a good working example).
 
 Of cause there are disadvantages:
 
 - you will need to get familiar with new settings
-- you will suffer each time you work on someone else's computer for long (but after all, why should you do that?)
+- you will suffer a little (but not that much) each time you work on someone else's computer for a long time (but you can do a good deed and supply them with the layout ;)
 
 * Installation
 
-On linux:
+On linux (X11):
 
 1. put this line into your .xprofile or whatever:
 ~xkbcomp -I"$HOME/.config/xkb" $HOME/.config/xkb/my $DISPLAY~
 
-On windows:
+On Windows:
 
 1. install AutoHotkey
 2. put the script into autorun somehow
+
+On mac:
+
+1. install Karabiner
+2. run the script
 
 * How to use
 
@@ -54,27 +61,46 @@ Simple remappings:
 - ~d~ = backspace, ~f~ = delete
 - ~g~ = escape, ~h~ = return
 - ~1~ = F1 ... ~0~ = F10
-- many useful symbols missing on Cyrillic layout
-- some usable typographical and mathematical symbols: "dash", "plus-minus", "approximately equal", "not equal".
+- many useful symbols missing on non-English layout (say Cyrillic one) — symbols can be inserted from the overlay layer with no layout switching.
+
+You even can press Caps+Shift with your left pinky to select text, enter uppercase characters or use some advanced hotkeys.
 
 Combos:
-- ~u~ = ctrl-left (usually jump to the beginning of the word), ~o~ = ctrl-right (usually jumps to the end of the word)
-- ~e~ = ctrl-backspace (usually deletes from the cursor to the beginning of the word), ~r~ = ctrl-delete (usually deletes from the cursor to the end of the word)
+- ~u~ = ctrl-left (usually jump to the beginning of the word), ~o~ = ctrl-right (usually jumps to the end of the word);
+- ~e~ = ctrl-backspace (usually deletes from the cursor to the beginning of the word), ~r~ = ctrl-delete (usually deletes from the cursor to the end of the word).
+
+The most controversial change is of course Ctrl in the home row, on the place where once Semicolon lived, and Alt just below the Control on the Slash / Question Mark key.
+- this remap appeared to be a life changer for advanced Emacs usage;
+- you even can press those two buttons at once with your pinky, making terrible `C-M-...` bindings comfy;
+- Semicolon and Slash are now on the overlay, and it's fine, since you'll already be holding Overlay key (ex CapsLock) pressed most of the time.
 
 * Details
 ** Why some keys on the overlay behave the same way as on latin layout without an overlay?
+
 Because, when you're not on latin layout, you need to switch layout to latin one and back to enter, say, quotation sign or square bracket. It's easier to enter those symbols holding the overlay activator and pressing a button you used to press in latin layout.
+
 ** Why to move comma and period from their places to N and M?
+
 Because I found it inconvenient to have Home and End at N and M. In this case one have to move his index finger from J key and lose his grasp at the home row.
+
 ** How does it work?
 
-On Linux it is implemented via xkb config files. On Windows it is an [[https://autohotkey.com/][AutoHotkey]] script.
+On Linux it is implemented via xkb config files. I'm idly thinking about rewriting it using Evermap or Xremap to support Wayland.
+
+On Windows it is an [[https://autohotkey.com/][AutoHotkey]] script. On Mac I found that Karabiner can handle the job.
 
 ** Why not to use level 3 symbols instead of overlays?
 
- Because overlays work in java swing apps like Freeplane and level 3 symbols doesn't.
+Because overlays work in java swing apps like Freeplane and level 3 symbols don't.
 
- Actually, level 3 actions work in Freeplane's main interface but don't work in node editors. Neither in inline one nor in dialog one. And it is critical to have them work there.
+Actually, level 3 actions work in Freeplane's main interface but don't work in node editors. Neither in inline one nor in dialog one. And it is critical to have them work there.
+
+** Now how I enter Cyrillic letter Ж?
+
+Just switch to Cyrillic layout and type semicolon. You still can use it as Control when you hold it (didn't planned this, but somehow it works this way).
+
+Be aware that the Slash key won't work this way, it is just regular Alt. You can enter dot and comma (which reside on this key on Cyrillic layouts) from the overlay.
+
 * References
 
 Some good resources on XKB:
@@ -83,3 +109,4 @@ Some good resources on XKB:
 
 Interesting keyboard layouts:
 - [[https://ilyabirman.net/projects/typography-layout/][Ilya Birman's typography layout]] — for designers and text writers who care about quotes, dashes, and so on.
+- The idea to remap semicolon was taken from [[https://github.com/abo-abo/oremacs][abo-abo's emacs config]], but I used left pinky for movement keys and the right pinky for modifiers.

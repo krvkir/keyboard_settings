@@ -1,3 +1,4 @@
+// -*-mode: C-*-
 // translation from evdev scancodes to something resembling xfree86 keycodes.
 
 default xkb_keycodes "evdev" {
@@ -8,68 +9,82 @@ default xkb_keycodes "evdev" {
     <LSGT> = 94;
 
     <TLDE> = 49;
-    <AE01> = 10;
-    <AE02> = 11;
-    <AE03> = 12;
-    <AE04> = 13;
-    <AE05> = 14;
-    <AE06> = 15;
-    <AE07> = 16;
-    <AE08> = 17;
-    <AE09> = 18;
-    <AE10> = 19;
-    <AE11> = 20;
-    <AE12> = 21;
+    <AE01> = 10; // 1
+    <AE02> = 11; // 2
+    <AE03> = 12; // 3
+    <AE04> = 13; // 4
+    <AE05> = 14; // 5
+    <AE06> = 15; // 6
+    <AE07> = 16; // 7
+    <AE08> = 17; // 8
+    <AE09> = 18; // 9
+    <AE10> = 19; // 0
+    <AE11> = 20; // -
+    <AE12> = 21; // +
     <BKSP> = 22;
 
     <TAB> = 23;
-    <AD01> = 24;
-    <AD02> = 25;
-    <AD03> = 26;
-    <AD04> = 27;
-    <AD05> = 28;
-    <AD06> = 29;
-    <AD07> = 30;
-    <AD08> = 31;
-    <AD09> = 32;
-    <AD10> = 33;
-    <AD11> = 34;
-    <AD12> = 35;
+    <AD01> = 24; // q
+    <AD02> = 25; // w
+    <AD03> = 26; // e
+    <AD04> = 27; // r
+    <AD05> = 28; // t
+    <AD06> = 29; // y
+    <AD07> = 30; // u
+    <AD08> = 31; // i
+    <AD09> = 32; // o
+    <AD10> = 33; // p
+    <AD11> = 34; // [
+    <AD12> = 35; // ]
     <BKSL> = 51;
     alias <AC12> = <BKSL>;
     <RTRN> = 36;
 
-    <CAPS> = 66;
-    <AC01> = 38;
-    <AC02> = 39;
-    <AC03> = 40;
-    <AC04> = 41;
-    <AC05> = 42;
-    <AC06> = 43;
-    <AC07> = 44;
-    <AC08> = 45;
-    <AC09> = 46;
-    <AC10> = 47;
-    <AC11> = 48;
+    <CAPS> = 66; 
+    <AC01> = 38; // a
+    <AC02> = 39; // s
+    <AC03> = 40; // d
+    <AC04> = 41; // f
+    <AC05> = 42; // g
+    <AC06> = 43; // h
+    <AC07> = 44; // j
+    <AC08> = 45; // k
+    <AC09> = 46; // l
+    <AC10> = 47; // ;:
+    <AC11> = 48; // '
 
-    <LFSH> = 50;
-    <AB01> = 52;
-    <AB02> = 53;
-    <AB03> = 54;
-    <AB04> = 55;
-    <AB05> = 56;
-    <AB06> = 57;
-    <AB07> = 58;
-    <AB08> = 59;
-    <AB09> = 60;
-    <AB10> = 61;
-    <RTSH> = 62;
+    <LFSH> = 50; 
+    <AB01> = 52; // z
+    <AB02> = 53; // x
+    <AB03> = 54; // c
+    <AB04> = 55; // v
+    <AB05> = 56; // b
+    <AB06> = 57; // n
+    <AB07> = 58; // m
+    <AB08> = 59; // ,
+    <AB09> = 60; // .
+    <AB10> = 61; // /?
+    <RTSH> = 62; 
 
     <LALT> = 64;
     <LCTL> = 37;
+    
+    // // Alt close to Space, Control to the right of Alt
     <RCTL> = 105;
     <RALT> = 108;
+    
+    // // Reversed right Alt and Control:
+    // // Control close to Space, ALt to the right of Control
+    // <RCTL> = 108;
+    // <RALT> = 105;
 
+    // Right Alt swapped with Question mark,
+    // and Right Control swapped with Semicolon 
+    //<RCTL> = 61 ; // ;: is now Ctrl
+    //<RALT> = 47 ; // /? is now Alt
+    //<AB10> = 105; // Alt is now /?
+    //<AC10> = 108; // Ctrl is now ;:
+    
     <SPCE> = 65;
     // Microsoft keyboard extra keys
     <LWIN> = 133;
@@ -78,18 +93,18 @@ default xkb_keycodes "evdev" {
     alias <MENU> = <COMP>;
 
     <ESC> = 9;
-    <FK01> = 67;
-    <FK02> = 68;
-    <FK03> = 69;
-    <FK04> = 70;
-    <FK05> = 71;
-    <FK06> = 72;
-    <FK07> = 73;
-    <FK08> = 74;
-    <FK09> = 75;
-    <FK10> = 76;
-    <FK11> = 95;
-    <FK12> = 96;
+    <FK01> = 67; // F1
+    <FK02> = 68; // F2
+    <FK03> = 69; // F3
+    <FK04> = 70; // F4
+    <FK05> = 71; // F5
+    <FK06> = 72; // F6
+    <FK07> = 73; // F7
+    <FK08> = 74; // F8
+    <FK09> = 75; // F9
+    <FK10> = 76; // F10
+    <FK11> = 95; // F11
+    <FK12> = 96; // F12
 
     <PRSC> = 107;
     // <SYRQ> = 107;
@@ -290,7 +305,8 @@ default xkb_keycodes "evdev" {
     <VM> = 212;
     <VCOM> = 214;
     <VPER> = 216;
-    <VSLA> = 217;
+    //    <VSLA> = 219;
+    //    <VCTL> = 220;
 
     // Modifier keys
     <LVL3> = 92;

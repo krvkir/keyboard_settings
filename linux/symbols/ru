@@ -1,3 +1,4 @@
+// -*-mode: C-*-
 # coding: utf-8
 
 // Windows layout
@@ -63,7 +64,7 @@ xkb_symbols "common" {
     key <AC07> { overlay1 = <VJ>, [ Cyrillic_o, Cyrillic_O ] };
     key <AC08> { overlay1 = <VK>, [ Cyrillic_el, Cyrillic_EL ] };
     key <AC09> { overlay1 = <VL>, [ Cyrillic_de, Cyrillic_DE ] };
-    key <AC10> { overlay1 = <VSEM>, [ Cyrillic_zhe, Cyrillic_ZHE ] };
+    key <AC10> { overlay1 = <VSEM>, [ Cyrillic_zhe, Cyrillic_ZHE ] }; // somehow Ctrl key from `us` mapping still works here, although it isn't remapped here.
     key <AC11> { overlay1 = <VAPO>, [ Cyrillic_e, Cyrillic_E ] };
 
     key <AB01> { overlay1 = <VZ>, [ Cyrillic_ya, Cyrillic_YA ] };
@@ -75,7 +76,8 @@ xkb_symbols "common" {
     key <AB07> { overlay1 = <VM>, [ Cyrillic_softsign, Cyrillic_SOFTSIGN ] };
     key <AB08> { overlay1 = <VCOM>, [ Cyrillic_be, Cyrillic_BE ] };
     key <AB09> { overlay1 = <VPER>, [ Cyrillic_yu, Cyrillic_YU ] };
-    key <AB10> { overlay1 = <VSLA>, [ slash, question ] };
-
+    //key <AB10> { overlay1 = <VSLA>, [ slash, question ] };
+    key <AB10> { overlay1 = <VSLA>, [ Alt_R, Meta_R ] }; // overlay doesn't work
+    
     include "kpdl(comma)"
 };

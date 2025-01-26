@@ -1,3 +1,4 @@
+// -*-mode: C-*-
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
     key.type = "THREE_LEVEL";
@@ -39,10 +40,11 @@ xkb_symbols "basic" {
     key <AC06> { overlay1 = <VH>, [ h, H ] };
     key <AC07> { overlay1 = <VJ>, [ j, J ] };
     key <AC08> { overlay1 = <VK>, [ k, K ] };
-    key <AC09> { overlay1 = <VL>, [ l, L ] };
-    key <AC10> { overlay1 = <VSEM>, [ semicolon, colon ] };
+    key <AC09> { overlay1 = <VL>, [ l, L ] }; 
+    //key <AC10> { overlay1 = <VSEM>, [ semicolon, colon ] };
+    key <AC10> { overlay1 = <VSEM>, [ Control_R ] }; // this works!
     key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl ] };
-
+    
     key <AB01> { overlay1 = <VZ>, [ z, Z, numbersign ] };
     key <AB02> { overlay1 = <VX>, [ x, X, at ] };
     key <AB03> { overlay1 = <VC>, [ c, C ] };
@@ -52,8 +54,9 @@ xkb_symbols "basic" {
     key <AB07> { overlay1 = <VM>, [ m, M ] };
     key <AB08> { overlay1 = <VCOM>, [ comma, less ] };
     key <AB09> { overlay1 = <VPER>, [ period, greater ] };
-    key <AB10> { overlay1 = <VSLA>, [ slash, question, XF86Search ] };
-
+    //key <AB10> { overlay1 = <VSLA>, [ slash, question ] };
+    key <AB10> { overlay1 = <VSLA>, [ Alt_R, Meta_R ] }; // Alt does work, but overlay doesn't: can't send VSLA to overlay
+    
     key <BKSL> { [ backslash, bar ] };
 };
 
