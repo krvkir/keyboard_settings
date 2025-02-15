@@ -7,7 +7,6 @@ xkb_symbols "pc105" {
     // The extra key on many European keyboards:
     key <LSGT> { [ less, greater, bar, brokenbar ] };
 
-    
     // The following keys are common to all layouts.
     key <BKSL> { [ backslash, bar ] };
     key <SPCE> { [ space ] };
@@ -34,6 +33,8 @@ xkb_symbols "pc105" {
     key <LCTL> { [ Control_L ] };
     key <RCTL> { [ Control_R ] };
 
+    key <HYPR> { [ ISO_Level3_Shift ] };
+
     key <LALT> { [ Alt_L, Meta_L ] };
     key <RALT> { [ Alt_R, Meta_R ] };
 
@@ -57,23 +58,25 @@ xkb_symbols "pc105" {
     key <KIUP> { [ XF86KbdBrightnessUp ] };
 };
 
+
+// Virtual rows
 hidden partial alphanumeric_keys
 xkb_symbols "virtualkeys" {
 
     // Numbers row
     // ... left side
     key <VGRA> { [grave, asciitilde, Escape] };
-    key <V1> { actions=[ RedirectKey(key=<FK01>)] };
-    key <V2> { actions=[ RedirectKey(key=<FK02>)] };
-    key <V3> { actions=[ RedirectKey(key=<FK03>)] };
-    key <V4> { actions=[ RedirectKey(key=<FK04>)] };
-    key <V5> { actions=[ RedirectKey(key=<FK05>)] };
-    key <V6> { actions=[ RedirectKey(key=<FK06>)] };
+    key <V1> { [ NoSymbol ] };
+    key <V2> { [ NoSymbol ] };
+    key <V3> { [ grave, asciitilde ] };
+    key <V4> { [ NoSymbol ] };
+    key <V5> { [ NoSymbol ] };
+    key <V6> { [ NoSymbol ] };
     // ... right side
-    key <V7> { actions=[ RedirectKey(key=<FK07>)] };
-    key <V8> { actions=[ RedirectKey(key=<FK08>)] };
-    key <V9> { actions=[ RedirectKey(key=<FK09>)] };
-    key <V0> { actions=[ RedirectKey(key=<FK10>)] };
+    key <V7> { [ NoSymbol ] };
+    key <V8> { [ semicolon, colon ] };
+    key <V9> { [ NoSymbol ] };
+    key <V0> { [ NoSymbol ] };
     key <VMIN> { [emdash, approxeq] };
     key <VEQU> { [notequal, plusminus] };
     
@@ -84,25 +87,25 @@ xkb_symbols "virtualkeys" {
     key <VW> { actions=[ RedirectKey(key=<PGUP>) ] };
     key <VE> { actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super) ]};
     key <VR> { actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super) ]};
-    key <VT> { [ equal, plus ] };
+    key <VT> { [ NoSymbol ] };
     // ... right side  
     key <VY> { [ grave, asciitilde ] };
     key <VU> { actions=[ RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super) ] };
     key <VI> { actions=[ RedirectKey(key=<UP>) ] };
     key <VO> { actions=[ RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super) ] };
-    key <VP> { [ slash, question ] };
+    key <VP> { [ NoSymbol ] };
     key <VLBR> { [ bracketleft, braceleft ] };
     key <VRBR> { [ bracketright, braceright ] };
 
     // Second row
     // ... left side
-    key <VA> { [ underscore, emdash ] };
+    key <VA> { [ NoSymbol ] };
     key <VS> { actions=[ RedirectKey(key=<PGDN>) ] };
     key <VD> { actions=[ RedirectKey(key=<BKSP>)] };
     key <VF> { actions=[ RedirectKey(key=<DELE>)] };
     key <VG> { actions=[ RedirectKey(key=<ESC>)] };
     // ... right side
-    key <VH> {[Return]};
+    key <VH> { [Return] };
     key <VJ> { actions=[ RedirectKey(key=<LEFT>)]};
     key <VK> { actions=[ RedirectKey(key=<DOWN>)]};
     key <VL> { actions=[ RedirectKey(key=<RGHT>)]};
@@ -116,7 +119,7 @@ xkb_symbols "virtualkeys" {
     key <VX> { actions=[ RedirectKey(key=<AB02>, modifiers=Control, clearmods=Super) ] };
     key <VC> { actions=[ RedirectKey(key=<AB03>, modifiers=Control, clearmods=Super) ] };
     key <VV> { actions=[ RedirectKey(key=<AB04>, modifiers=Control, clearmods=Super) ] };
-    key <VB> { [ minus, underscore ] };
+    key <VB> { [ NoSymbol ] };
     // ... right side
     key <VN> { actions=[ RedirectKey(key=<HOME>)] };
     key <VM> { actions=[ RedirectKey(key=<END>)] };
@@ -155,7 +158,7 @@ xkb_symbols "editing" {
 partial modifier_keys
 xkb_symbols "overlay1_switch" {
     replace key <CAPS> {
-        [ ISO_Level3_Shift ],
+        [ NoSymbol ],
         actions = [ SetControls(controls=overlay1) ]
     };
 };

@@ -2,12 +2,12 @@
 // Look for default configs here:
 // /usr/share/X11/xkb/
 xkb_keymap {
-    xkb_keycodes { include "evdev+aliases(qwerty)"	};
-    xkb_types { include "complete+numpad(mac)"	};
-    xkb_compat { include "complete"	};
+    xkb_keycodes { include "evdev" };
+    xkb_types { include "complete+numpad(mac)" };
+    xkb_compat { include "complete" };
     xkb_symbols {
-        include "pc+us+ru(winkeys):2+inet(evdev)"
-        // include "pc+us+ru(winkeys):2+am(phonetic):3+inet(evdev)"
+        include "pc+us+ru:2+inet(evdev)"
+	//include "pc+us+ru(common):2+am(phonetic):3+inet(evdev)"
         // include "group(shifts_toggle)"
         include "group(alt_shift_toggle)"
 	// include "group(alt_space_toggle)"

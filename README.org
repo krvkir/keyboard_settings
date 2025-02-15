@@ -1,7 +1,7 @@
 #+TITLE: Keyboard settings
 
 #+CAPTION: Extra layout enabled by CapsLock key
-[[./layout-2025-01-26.png]]
+[[./layout-2025-02-16.png]]
 
 (Thanks keyboard-layout-editor.com for the image!)
 
@@ -54,7 +54,11 @@ On mac:
 
 * How to use
 
-Press and hold CapsLock button. It activates new layer:
+There are two layers: navigational one and one for digits and symbols.
+
+** Navigational layer
+
+To activate navigational layer, press and hold CapsLock button:
 
 Simple remappings:
 - ~ikjl~ = up/down/left/right arrows
@@ -62,7 +66,6 @@ Simple remappings:
 - ~p~ = page up, ~;~ = page down
 - ~d~ = backspace, ~f~ = delete
 - ~g~ = escape, ~h~ = return
-- ~1~ = F1 ... ~0~ = F10
 - many useful symbols missing on non-English layout (say Cyrillic one) — symbols can be inserted from the overlay layer with no layout switching.
 
 You even can press Caps+Shift with your left pinky to select text, enter uppercase characters or use some advanced hotkeys.
@@ -75,6 +78,18 @@ The most controversial change is of course Ctrl in the home row, on the place wh
 - this remap appeared to be a life changer for advanced Emacs usage;
 - you even can press those two buttons at once with your pinky, making terrible `C-M-...` bindings comfy;
 - Semicolon and Slash are now on the overlay, and it's fine, since you'll already be holding Overlay key (ex CapsLock) pressed most of the time.
+
+** Numbers and Symbols
+
+To activate the layer with numbers and symbols, press Right Alt:
+
+- home row (asdf...) holds digits;
+- the row below the home row (zxcv...) holds symbols which are usually available on Shift-<digit>;
+- the row above the home row (qwer...) holds F-keys.
+
+** Extra Symbols
+
+Because we've put digits and symbols into the layer, we now can map frequently used symbols to the number buttons. The best keys there are 234 and 789 because they're easily reachable with the longer fingers.
 
 * Details
 ** Why some keys on the overlay behave the same way as on latin layout without an overlay?
@@ -93,6 +108,12 @@ Because overlays work in java swing apps like Freeplane and level 3 symbols don'
 
 Actually, level 3 actions work in Freeplane's main interface but don't work in node editors. Neither in inline one nor in dialog one. And it is critical to have them work there.
 
+** On Linux, the layout settings reset to defaults each time I switch the language.
+
+Your desktop environment may try to manage layouts by itself. I faced this problem on XFCE4 when tried to get keyboard layout indicator work.
+
+On XFCE, it helped to remove all the layouts from XFCE keyboard manager, keeping the only English layout. It made XFCE stop switching layout by itself and ruining my settings. This is very inconvenient, but for now I haven't found the proper solution, sorry.
+
 ** Now how I enter Cyrillic letter Ж?
 
 Just switch to Cyrillic layout and type semicolon. You still can use it as Control when you hold it (didn't planned this, but somehow it works this way).
@@ -104,7 +125,8 @@ Be aware that the Slash key won't work this way, it is just regular Alt. You can
 Some good resources on XKB:
 - [[https://www.x.org/archive/X11R7.5/doc/input/XKB-Enhancing.html]]
 - [[https://www.x.org/releases/X11R7.7/doc/kbproto/xkbproto.html]]
-
+- [[https://wiki.archlinux.org/title/X_keyboard_extension#Modifiers_and_types][archlinux xkb page]], good explanations and lots of examples
+  
 Interesting keyboard layouts:
 - [[https://ilyabirman.net/projects/typography-layout/][Ilya Birman's typography layout]] — for designers and text writers who care about quotes, dashes, and so on.
 - The idea to remap semicolon was taken from [[https://github.com/abo-abo/oremacs][abo-abo's emacs config]], but I used left pinky for movement keys and the right pinky for modifiers.

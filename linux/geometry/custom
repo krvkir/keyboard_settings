@@ -3,6 +3,9 @@ xkb_geometry "thinkpad_s1" {
     description= "Thinkpad Yoga S1";
     width= 330;
     height= 210;
+    baseColor = "white";
+    labelColor = "black";
+
 
     shape.cornerRadius= 0.5;
     shape "NORM" { { [ 18  ,18] } };
@@ -59,10 +62,20 @@ xkb_geometry "thinkpad_s1" {
         row {
             top= 14;
             keys {  { <ESC>, "ESC" },
-                    { <FK01> }, { <FK02>, color="white" }, <FK03>, { <FK04>, color="white" },
-                    { <FK05>, 3 }, { <FK06>, color="white" }, <FK07>, <FK08>,
-                    { <FK09>, 3, color="white" }, <FK10>, { <FK11>, color="white" }, { <FK12>, color="white" },
-                    { <HOME>, 3 }, <END>, { <DELE>, "DELE" }
+                    { <FK01> },
+                    { <FK02> }, <FK03>,
+                    { <FK04> },
+                    { <FK05>, 3 },
+                    { <FK06> },
+                    <FK07>,
+                    <FK08>,
+                    { <FK09>, 3 },
+                    <FK10>,
+                    { <FK11> },
+                    { <FK12> },
+                    { <HOME>, 3 },
+                    <END>,
+                    { <DELE>, "DELE" }
                  };
         };
     }; // End of "Function" section
@@ -73,10 +86,12 @@ xkb_geometry "thinkpad_s1" {
             top= 1;
             keys { <TLDE>, <AE01>, <AE02>, <AE03>, <AE04>,
                    <AE05>, <AE06>,
-                   { <AE07>, color="grey20" },
-                   { <AE08>, color="grey20" },
-                   { <AE09>, color="grey20" },
-                   { <AE10>, color="grey20" }, <AE11>, <AE12>,
+                   <AE07>,
+                   <AE08>,
+                   <AE09>,
+                   <AE10>,
+                   <AE11>,
+                   <AE12>,
                    { <BKSP>, "BKSP" }
                  };
         };
@@ -85,11 +100,13 @@ xkb_geometry "thinkpad_s1" {
             keys { { <TAB>, "TABK" },
                    <AD01>, <AD02>, <AD03>, <AD04>, <AD05>,
                    <AD06>,
-                   { <AD07>, color="grey20" },
-                   { <AD08>, color="grey20" },
-                   { <AD09>, color="grey20" },
-                   { <AD10>, color="grey20" },
-                   <AD11>, <AD12>, { <BKSL>, "BKSL" }
+                   { <AD07> },
+                   { <AD08> },
+                   { <AD09> },
+                   { <AD10> },
+                   <AD11>,
+                   <AD12>,
+                   { <BKSL>, "BKSL" }
                  };
         };
         row {
@@ -97,28 +114,34 @@ xkb_geometry "thinkpad_s1" {
             keys { { <CAPS>, "CAPS" },
                    <AC01>, <AC02>, <AC03>, <AC04>, <AC05>,
                    <AC06>,
-                   { <AC07>, color="grey20" },
-                   { <AC08>, color="grey20" },
-                   { <AC09>, color="grey20" },
-                   { <AC10>, color="grey20" },
-                   <AC11>, { <RTRN>, "RTRN" }
+                   { <AC07> },
+                   { <AC08> },
+                   { <AC09> },
+                   { <AC10> },
+                   <AC11>,
+                   { <RTRN>, "RTRN" }
                  };
         };
         row {
             top= 58;
             keys { { <LFSH>, "LFSH" },
-                   <AB01>, <AB02>, <AB03>, <AB04>, <AB05>,
+                   <AB01>,
+                   <AB02>,
+                   <AB03>,
+                   <AB04>,
+                   <AB05>,
                    <AB06>,
-                   { <AB07>, color="grey20" }, <AB08>,
-                   { <AB09>, color="grey20" },
-                   { <AB10>, color="grey20" },
+                   { <AB07> },
+                   <AB08>,
+                   { <AB09> },
+                   { <AB10> },
                    { <RTSH>, "RTSH" }
                  };
         };
         row {
             top= 77;
             key.shape= "WIN";
-            keys { { <FN>, color="grey20" },
+            keys { { <FN> },
                    { <LCTL>, "LCTL" },
                    <LWIN>,
                    { <LALT>, "LALT" },
