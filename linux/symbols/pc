@@ -65,27 +65,27 @@ xkb_symbols "virtualkeys" {
 
     // Numbers row
     // ... left side
-    key <VGRA> { [grave, asciitilde, Escape] };
+    key <VGRA> { [ grave, asciitilde, Escape ] };
     key <V1> { [ NoSymbol ] };
     key <V2> { [ backslash, bar ] };
-    key <V3> { [ grave, asciitilde ] };
-    key <V4> { [ slash, question ] };
+    key <V3> { [ NoSymbol ] };
+    key <V4> { [ NoSymbol ] };
     key <V5> { [ NoSymbol ] };
     key <V6> { [ NoSymbol ] };
     // ... right side
-    key <V7> { [ minus, underscore ] };
-    key <V8> { [ semicolon, colon ] };
-    key <V9> { [ equal, plus ] };
+    key <V7> { [ emdash, endash ] };
+    key <V8> { [ NoSymbol ] };
+    key <V9> { [ approxeq, notequal, plusminus ] };
     key <V0> { [ NoSymbol ] };
-    key <VMIN> { [emdash, approxeq] };
-    key <VEQU> { [notequal, plusminus] };
+    key <VMIN> { [ NoSymbol ] };
+    key <VEQU> { [ NoSymbol ] };
     
     // First row
     // ... left side
     key <VTAB> { actions=[ RedirectKey(key=<TAB>, modifiers=Control, clearmods=Super) ] };
     //key <VQ> { actions=[ RedirectKey(key=<AD01>, modifiers=Control, clearmods=Super) ] };
     key <VQ> { actions=[ RedirectKey(key=<PGUP>) ] };
-    key <VW> { [ NoSymbol ] };
+    key <VW> { actions=[ RedirectKey(key=<PGDN>) ] };
     key <VE> { actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super) ]};
     key <VR> { actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super) ]};
     key <VT> { [ NoSymbol ] };
@@ -100,7 +100,7 @@ xkb_symbols "virtualkeys" {
 
     // Second row
     // ... left side
-    key <VA> { actions=[ RedirectKey(key=<PGDN>) ] };
+    key <VA> { [ Tab ] };
     key <VS> { [ Return ] };
     key <VD> { actions=[ RedirectKey(key=<BKSP>)] };
     key <VF> { actions=[ RedirectKey(key=<DELE>)] };
