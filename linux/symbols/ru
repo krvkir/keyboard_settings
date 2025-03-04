@@ -6,7 +6,7 @@
 
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "common" {
-    key.type = "THREE_LEVEL";
+    key.type = "FOUR_LEVEL";
     name[Group1]= "Russian";
 
     // Use the same symbols on shifted row as English layout uses.
@@ -24,21 +24,7 @@ xkb_symbols "common" {
     // key <AE11> { overlay1 = <VMIN>, [  ] };
     // key <AE12> { overlay1 = <VEQU>, [  ] };
 
-    //key <AE01> { overlay1 = <V1>, [ 1, exclam ] };    
-    //key <AE02> { overlay1 = <V2>, [ 2, at ] };
-    //key <AE03> { overlay1 = <V3>, [ 3, numbersign ] };
-    //key <AE04> { overlay1 = <V4>, [ 4, dollar ] };
-    //key <AE05> { overlay1 = <V5>, [ 5, percent ] };
-    //key <AE06> { overlay1 = <V6>, [ 6, asciicircum ] };
-    //key <AE07> { overlay1 = <V7>, [ 7, ampersand ] };
-    //key <AE08> { overlay1 = <V8>, [ 8, asterisk ] };
-    //key <AE09> { overlay1 = <V9>, [ 9, parenleft ] };
-    //key <AE10> { overlay1 = <V0>, [ 0, parenright ] };
-    //key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
-    //key <AE12> { overlay1 = <VEQU>, [ Cyrillic_zhe, Cyrillic_ZHE ] };
-
     key <BKSL> { [ backslash, bar ] };
-
     key <LSGT> { [ slash, bar ] };
 
     key <AD01> { overlay1 = <VQ>, [ Cyrillic_shorti, Cyrillic_SHORTI, F1  ] };
@@ -51,8 +37,8 @@ xkb_symbols "common" {
     key <AD08> { overlay1 = <VI>, [ Cyrillic_sha, Cyrillic_SHA      , F8  ] };
     key <AD09> { overlay1 = <VO>, [ Cyrillic_shcha, Cyrillic_SHCHA  , F9  ] };
     key <AD10> { overlay1 = <VP>, [ Cyrillic_ze, Cyrillic_ZE        , F10 ] };
-    key <AD11> { overlay1 = <VLBR>, [ Cyrillic_ha, Cyrillic_HA       ] };
-    key <AD12> { overlay1 = <VRBR>, [ Cyrillic_hardsign, Cyrillic_HARDSIGN ] };
+    key <AD11> { overlay1 = <VLBR>, [ Cyrillic_ha, Cyrillic_HA      , F11 ] };
+    key <AD12> { overlay1 = <VRBR>, [ Cyrillic_hardsign, Cyrillic_HARDSIGN, F12 ] };
 
     key <AC01> { overlay1 = <VA>, [ Cyrillic_ef, Cyrillic_EF, 1 ] };
     key <AC02> { overlay1 = <VS>, [ Cyrillic_yeru, Cyrillic_YERU, 2 ] };
@@ -64,7 +50,7 @@ xkb_symbols "common" {
     key <AC08> { overlay1 = <VK>, [ Cyrillic_el, Cyrillic_EL, 8 ] };
     key <AC09> { overlay1 = <VL>, [ Cyrillic_de, Cyrillic_DE, 9 ] };
     key <AC10> { overlay1 = <VSEM>, [ Control_R, Control_R, 0 ] };
-    key <AC11> { overlay1 = <VAPO>, [ Cyrillic_e, Cyrillic_E ] };
+    key <AC11> { overlay1 = <VAPO>, [ Cyrillic_e, Cyrillic_E, 0 ] };
 
     key <AB01> { overlay1 = <VZ>, [ Cyrillic_ya, Cyrillic_YA, exclam ] };
     key <AB02> { overlay1 = <VX>, [ Cyrillic_che, Cyrillic_CHE, at ] };

@@ -11,9 +11,9 @@ xkb_symbols "basic" {
     key <AE04> { overlay1 = <V4>, [ slash, question ] };
     //key <AE05> { overlay1 = <V5>, [ 5, percent ] };
     //key <AE06> { overlay1 = <V6>, [ 6, asciicircum ] };
-    key <AE07> { overlay1 = <V7>, [ equal, plus, approxeq, notequal ] };
+    key <AE07> { overlay1 = <V7>, [ minus, underscore, emdash, endash ] };
     key <AE08> { overlay1 = <V8>, [ semicolon, colon ] };
-    key <AE09> { overlay1 = <V9>, [ minus, underscore, emdash, endash ] };
+    key <AE09> { overlay1 = <V9>, [ equal, plus, approxeq, notequal ] };
     //key <AE10> { overlay1 = <V0>, [ 0, parenright ] };
     //key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
     //key <AE12> { overlay1 = <VEQU>, [ semicolon, colon ] };
@@ -30,8 +30,8 @@ xkb_symbols "basic" {
     key <AD08> { overlay1 = <VI>, [ i, I, F8 ] };
     key <AD09> { overlay1 = <VO>, [ o, O, F9 ]};
     key <AD10> { overlay1 = <VQ>, [ p, P, F10 ] };
-    key <AD11> { overlay1 = <VLBR>, [ bracketleft, braceleft ] };
-    key <AD12> { overlay1 = <VRBR>, [ bracketright, braceright ] };
+    key <AD11> { overlay1 = <VLBR>, [ bracketleft, braceleft, F11 ] };
+    key <AD12> { overlay1 = <VRBR>, [ bracketright, braceright, F12 ] };
 
     key <AC01> { overlay1 = <VA>, [ a, A, 1 ] };
     key <AC02> { overlay1 = <VS>, [ s, S, 2 ] };
@@ -41,9 +41,11 @@ xkb_symbols "basic" {
     key <AC06> { overlay1 = <VH>, [ h, H, 6 ] };
     key <AC07> { overlay1 = <VJ>, [ j, J, 7 ] };
     key <AC08> { overlay1 = <VK>, [ k, K, 8 ] };
-    key <AC09> { overlay1 = <VL>, [ l, L, 9 ] }; 
-    key <AC10> { overlay1 = <VSEM>, [ Control_R, Control_R, 0 ] };
-    key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl ] };
+    key <AC09> { overlay1 = <VL>, [ l, L, 9 ] };
+    // Inputting "0" does work in Emacs but doesn't work in Logseq
+    // or TiddlyWiki (or any other Electron app?).
+    key <AC10> { overlay1 = <VSEM>, [ Control_R, Control_R, 0] };
+    key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl, 0 ] };
     
     key <AB01> { overlay1 = <VZ>, [ z, Z, exclam ] };
     key <AB02> { overlay1 = <VX>, [ x, X, at ] };
