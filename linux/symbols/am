@@ -1,8 +1,9 @@
+// -*-mode: C-*-
 default partial alphanumeric_keys
 xkb_symbols "basic" {
-
+    key.type = "FOUR_LEVEL";
     name[Group1]= "Armenian";
-
+    
     key <TLDE>	{[ Armenian_separation_mark,  Armenian_exclam ]};
     key <AE01>	{[ Armenian_fe,		Armenian_FE	]};
     key <AE02>	{[ Armenian_dza,	Armenian_DZA	]};
@@ -63,9 +64,7 @@ xkb_symbols "olpc" {
 };
 
 xkb_symbols "phonetic" {
-
     include "am(basic)"
-
     name[Group1]= "Armenian (phonetic)";
 
     key <AE01>	{ overlay1 = <V1>, [ Armenian_e,		Armenian_E	]};
@@ -81,39 +80,39 @@ xkb_symbols "phonetic" {
     key <AE11>	{ overlay1 = <VMIN>, [ Armenian_hyphen,	U2015		]}; // quotation dash
     key <AE12>	{ overlay1 = <VEQU>, [ Armenian_zhe,	Armenian_ZHE	]};
 
-    key <LatQ>	{ overlay1 = <VQ>, [ Armenian_ke,		Armenian_KE	]};
-    key <LatW>	{ overlay1 = <VW>, [ Armenian_vo,		Armenian_VO	]};
-    key <LatE>	{ overlay1 = <VE>, [ Armenian_yech,	Armenian_YECH	]};
-    key <LatR>	{ overlay1 = <VR>, [ Armenian_re,		Armenian_RE	]};
-    key <LatT>	{ overlay1 = <VT>, [ Armenian_tyun,	Armenian_TYUN	]};
-    key <LatY>	{ overlay1 = <VY>, [ Armenian_at,		Armenian_AT	]};
-    key <LatU>	{ overlay1 = <VU>, [ Armenian_vyun,	Armenian_VYUN	]};
-    key <LatI>	{ overlay1 = <VI>, [ Armenian_ini,	Armenian_INI	]};
-    key <LatO>	{ overlay1 = <VO>, [ Armenian_o,		Armenian_O	]};
-    key <LatP>	{ overlay1 = <VP>, [ Armenian_pe,		Armenian_PE	]};
+    key <AD01>	{ overlay1 = <VQ>, [ Armenian_ke,		Armenian_KE	]};
+    key <AD02>	{ overlay1 = <VW>, [ Armenian_vo,		Armenian_VO	]};
+    key <AD03>	{ overlay1 = <VE>, [ Armenian_yech,	Armenian_YECH	]};
+    key <AD04>	{ overlay1 = <VR>, [ Armenian_re,		Armenian_RE	]};
+    key <AD05>	{ overlay1 = <VT>, [ Armenian_tyun,	Armenian_TYUN	]};
+    key <AD06>	{ overlay1 = <VY>, [ Armenian_at,		Armenian_AT	]};
+    key <AD07>	{ overlay1 = <VU>, [ Armenian_vyun,	Armenian_VYUN	]};
+    key <AD08>	{ overlay1 = <VI>, [ Armenian_ini,	Armenian_INI	]};
+    key <AD09>	{ overlay1 = <VO>, [ Armenian_o,		Armenian_O	]};
+    key <AD10>	{ overlay1 = <VP>, [ Armenian_pe,		Armenian_PE	]};
     key <AD11>	{ overlay1 = <VLBR>, [ Armenian_khe,	Armenian_KHE	]};
     key <AD12>	{ overlay1 = <VRBR>, [ Armenian_tsa,	Armenian_TSA	]};
 
-    key <LatA>	{ overlay1 = <VA>, [ Armenian_ayb,	Armenian_AYB	]};
-    key <LatS>	{ overlay1 = <VS>, [ Armenian_se,		Armenian_SE	]};
-    key <LatD>	{ overlay1 = <VD>, [ Armenian_da,		Armenian_DA	]};
-    key <LatF>	{ overlay1 = <VF>, [ Armenian_fe,		Armenian_FE	]};
-    key <LatG>	{ overlay1 = <VG>, [ Armenian_gim,	Armenian_GIM	]};
-    key <LatH>	{ overlay1 = <VH>, [ Armenian_ho,		Armenian_HO	]};
-    key <LatJ>	{ overlay1 = <VJ>, [ Armenian_hi,		Armenian_HI	]};
-    key <LatK>	{ overlay1 = <VK>, [ Armenian_ken,	Armenian_KEN	]};
-    key <LatL>	{ overlay1 = <VL>, [ Armenian_lyun,	Armenian_LYUN	]};
+    key <AC01>	{ overlay1 = <VA>, [ Armenian_ayb,	Armenian_AYB	]};
+    key <AC02>	{ overlay1 = <VS>, [ Armenian_se,		Armenian_SE	]};
+    key <AC03>	{ overlay1 = <VD>, [ Armenian_da,		Armenian_DA	]};
+    key <AC04>	{ overlay1 = <VF>, [ Armenian_fe,		Armenian_FE	]};
+    key <AC05>	{ overlay1 = <VG>, [ Armenian_gim,	Armenian_GIM	]};
+    key <AC06>	{ overlay1 = <VH>, [ Armenian_ho,		Armenian_HO	]};
+    key <AC07>	{ overlay1 = <VJ>, [ Armenian_hi,		Armenian_HI	]};
+    key <AC08>	{ overlay1 = <VK>, [ Armenian_ken,	Armenian_KEN	]};
+    key <AC09>	{ overlay1 = <VL>, [ Armenian_lyun,	Armenian_LYUN	]};
     key <AC10>	{ overlay1 = <VSEM>, [ semicolon,		Armenian_full_stop ]};
     key <AC11>	{ overlay1 = <VAPO>, [ Armenian_accent,	quotedbl	]};
     key <BKSL>	{[ Armenian_sha,	Armenian_SHA	]};
 
-    key <LatZ>	{ overlay1 = <VZ>, [ Armenian_za,		Armenian_ZA	]};
-    key <LatX>	{ overlay1 = <VX>, [ Armenian_ghat,	Armenian_GHAT	]};
-    key <LatC>	{ overlay1 = <VC>, [ Armenian_tso,	Armenian_TSO	]};
-    key <LatV>	{ overlay1 = <VV>, [ Armenian_vev,	Armenian_VEV	]};
-    key <LatB>	{ overlay1 = <VB>, [ Armenian_ben,	Armenian_BEN	]};
-    key <LatN>	{ overlay1 = <VN>, [ Armenian_nu,		Armenian_NU	]};
-    key <LatM>	{ overlay1 = <VM>, [ Armenian_men,	Armenian_MEN	]};
+    key <AB01>	{ overlay1 = <VZ>, [ Armenian_za,		Armenian_ZA	]};
+    key <AB02>	{ overlay1 = <VX>, [ Armenian_ghat,	Armenian_GHAT	]};
+    key <AB03>	{ overlay1 = <VC>, [ Armenian_tso,	Armenian_TSO	]};
+    key <AB04>	{ overlay1 = <VV>, [ Armenian_vev,	Armenian_VEV	]};
+    key <AB05>	{ overlay1 = <VB>, [ Armenian_ben,	Armenian_BEN	]};
+    key <AB06>	{ overlay1 = <VN>, [ Armenian_nu,		Armenian_NU	]};
+    key <AB07>	{ overlay1 = <VM>, [ Armenian_men,	Armenian_MEN	]};
     key <AB08>	{ overlay1 = <VCOM>, [ comma,		guillemotleft	]};
     key <AB09>	{ overlay1 = <VPER>, [ U2024,		guillemotright	]}; // Armenian semicolon (mijaket)
     key <AB10>	{ overlay1 = <VSLA>, [ slash,		Armenian_question ]};
