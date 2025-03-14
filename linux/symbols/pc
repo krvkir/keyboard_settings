@@ -88,16 +88,16 @@ xkb_symbols "virtualkeys" {
     key <VW> { actions=[ RedirectKey(key=<PGDN>) ] };
     key <VE> { actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super) ]};
     key <VR> { actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super) ]};
-    key <VT> { [ NoSymbol ] };
+    key <VT> { [ equal, plus, equal, plus ] };
     // ... right side  
-    key <VY> { [ grave, asciitilde ] };
+    key <VY> { [ minus, underscore ] };
     key <VU> { actions=[ RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super) ] };
     key <VI> { actions=[ RedirectKey(key=<UP>) ] };
     key <VO> { actions=[ RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super) ] };
-    key <VP> { [ NoSymbol ] };
+    key <VP> { [ backslash, bar ] };
     key <VLBR> { [ bracketleft, braceleft ] };
     key <VRBR> { [ bracketright, braceright ] };
-
+    
     // Second row
     // ... left side
     key <VA> { [ Tab ] };
@@ -106,7 +106,7 @@ xkb_symbols "virtualkeys" {
     key <VF> { actions=[ RedirectKey(key=<DELE>)] };
     key <VG> { actions=[ RedirectKey(key=<ESC>)] };
     // ... right side
-    key <VH> { [ NoSymbol ] };
+    key <VH> { [ grave, asciitilde ] };
     key <VJ> { actions=[ RedirectKey(key=<LEFT>)]};
     key <VK> { actions=[ RedirectKey(key=<DOWN>)]};
     key <VL> { actions=[ RedirectKey(key=<RGHT>)]};

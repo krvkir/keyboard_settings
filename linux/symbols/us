@@ -6,17 +6,34 @@ xkb_symbols "basic" {
 
     //key <TLDE> { overlay1 = <VGRA>, [ grave, asciitilde, Escape ] };
     //key <AE01> { overlay1 = <V1>, [ 1, exclam ] };
-    key <AE02> { overlay1 = <V2>, [ backslash, bar ] };
-    key <AE03> { overlay1 = <V3>, [ grave, asciitilde ] };
-    key <AE04> { overlay1 = <V4>, [ slash, question ] };
+    //key <AE02> { overlay1 = <V2>, [ backslash, bar ] };
+    //key <AE03> { overlay1 = <V3>, [ grave, asciitilde ] };
+    //key <AE04> { overlay1 = <V4>, [ slash, question ] };
     //key <AE05> { overlay1 = <V5>, [ 5, percent ] };
     //key <AE06> { overlay1 = <V6>, [ 6, asciicircum ] };
-    key <AE07> { overlay1 = <V7>, [ minus, underscore, minus, underscore ] };
-    key <AE08> { overlay1 = <V8>, [ semicolon, colon,  period, comma ] };
-    key <AE09> { overlay1 = <V9>, [ equal, plus,       equal, plus ] };
+    //key <AE07> { overlay1 = <V7>, [ minus, underscore, minus, underscore ] };
+    //key <AE08> { overlay1 = <V8>, [ semicolon, colon,  period, comma ] };
+    //key <AE09> { overlay1 = <V9>, [ equal, plus,       equal, plus ] };
     //key <AE10> { overlay1 = <V0>, [ 0, parenright ] };
     //key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
     //key <AE12> { overlay1 = <VEQU>, [ semicolon, colon ] };
+
+    key <KP7> { [ minus, underscore, minus, underscore ] };
+    key <KP9> { [ equal, plus, equal, plus ] };
+    
+    key <TLDE> { overlay1 = <VGRA>, [ grave, asciitilde, Escape ] };
+    key <AE01> { overlay1 = <V1>, [ 1, exclam ] };
+    key <AE02> { overlay1 = <V2>, [ 2, at ] };
+    key <AE03> { overlay1 = <V3>, [ 3, numbersign ] };
+    key <AE04> { overlay1 = <V4>, [ 4, dollar ] };
+    key <AE05> { overlay1 = <V5>, [ 5, percent ] };
+    key <AE06> { overlay1 = <V6>, [ 6, asciicircum ] };
+    key <AE07> { overlay1 = <V7>, [ 7, ampersand ] };
+    key <AE08> { overlay1 = <V8>, [ 8, asterisk ] };
+    key <AE09> { overlay1 = <V9>, [ 9, parenleft ] };
+    key <AE10> { overlay1 = <V0>, [ 0, parenright ] };
+    key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
+    key <AE12> { overlay1 = <VEQU>, [ semicolon, colon ] };
 
     key <BKSL> { [ backslash, bar ] };
 
