@@ -18,9 +18,9 @@ xkb_symbols "basic" {
     //key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
     //key <AE12> { overlay1 = <VEQU>, [ semicolon, colon ] };
 
-    key <KP7> { [ minus, underscore, minus, underscore ] };
-    key <KP9> { [ equal, plus, equal, plus ] };
-    
+    key <KPSU> { overlay1 = <VLBR>, [ minus, underscore ] };
+    key <KPAD> { overlay1 = <VRBR>, [ equal, plus ] };
+   
     key <TLDE> { overlay1 = <VGRA>, [ grave, asciitilde, Escape ] };
     key <AE01> { overlay1 = <V1>, [ 1, exclam ] };
     key <AE02> { overlay1 = <V2>, [ 2, at ] };
@@ -33,7 +33,7 @@ xkb_symbols "basic" {
     key <AE09> { overlay1 = <V9>, [ 9, parenleft ] };
     key <AE10> { overlay1 = <V0>, [ 0, parenright ] };
     key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
-    key <AE12> { overlay1 = <VEQU>, [ semicolon, colon ] };
+    key <AE12> { overlay1 = <VEQU>, [ equal, plus ] };
 
     key <BKSL> { [ backslash, bar ] };
 

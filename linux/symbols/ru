@@ -37,13 +37,13 @@ xkb_symbols "common" {
     key <AE09> { overlay1 = <V9>, [ 9, parenleft ] };
     key <AE10> { overlay1 = <V0>, [ 0, parenright ] };
     key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
-    key <AE12> { overlay1 = <VEQU>, [ semicolon, colon ] };
+    key <AE12> { overlay1 = <VEQU>, [ equal, plus ] };
 
-    key <KP3> { [ Cyrillic_io, Cyrillic_IO ] };
-    key <KP8> { [ Cyrillic_zhe, Cyrillic_ZHE ] };
-
-    key <V3> { [ Cyrillic_io, Cyrillic_IO ] };
+    key <KPSU> { [ Cyrillic_zhe, Cyrillic_ZHE ] };
+    key <KPAD> { [ Cyrillic_io, Cyrillic_IO ] };
+    
     key <V8> { [ Cyrillic_zhe, Cyrillic_ZHE ] };
+    key <V9> { [ Cyrillic_io, Cyrillic_IO ] };
     
     key <BKSL> { [ backslash, bar ] };
     key <LSGT> { [ slash, bar ] };

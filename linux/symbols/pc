@@ -66,19 +66,19 @@ xkb_symbols "virtualkeys" {
     // Numbers row
     // ... left side
     key <VGRA> { [ grave, asciitilde, Escape ] };
-    key <V1> { [ NoSymbol ] };
-    key <V2> { [ backslash, bar ] };
-    key <V3> { [ NoSymbol ] };
-    key <V4> { [ NoSymbol ] };
-    key <V5> { [ NoSymbol ] };
+    key <V1> { [ F1 ] };
+    key <V2> { [ F2 ] };
+    key <V3> { [ F3 ] };
+    key <V4> { [ F4 ] };
+    key <V5> { [ F5 ] };
     key <V6> { [ NoSymbol ] };
     // ... right side
     key <V7> { [ emdash, endash ] };
     key <V8> { [ NoSymbol ] };
     key <V9> { [ approxeq, notequal, plusminus ] };
     key <V0> { [ NoSymbol ] };
-    key <VMIN> { [ NoSymbol ] };
-    key <VEQU> { [ NoSymbol ] };
+    key <VMIN> { [ bracketleft, braceleft ] };
+    key <VEQU> { [ bracketright, braceright ] };
     
     // First row
     // ... left side
@@ -90,7 +90,7 @@ xkb_symbols "virtualkeys" {
     key <VR> { actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super) ]};
     key <VT> { [ equal, plus, equal, plus ] };
     // ... right side  
-    key <VY> { [ minus, underscore ] };
+    key <VY> { [ minus, underscore, emdash, endash ] };
     key <VU> { actions=[ RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super) ] };
     key <VI> { actions=[ RedirectKey(key=<UP>) ] };
     key <VO> { actions=[ RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super) ] };
@@ -127,6 +127,11 @@ xkb_symbols "virtualkeys" {
     key <VCOM> { [ comma, less ] } ;
     key <VPER> { [ period, greater ] };
     key <VSLA> { [ slash, question ] };
+
+    // Extra
+    key <VUP> { [ parenleft ] };
+    key <VDN> { [ parenright ] };
+
 };
 
 hidden partial alphanumeric_keys
@@ -147,9 +152,9 @@ xkb_symbols "editing" {
     key <END> { [ End ] };
     key <PGDN> { [ Next ] };
 
-    key <UP> { [ Up ] };
+    key <UP> { overlay1 = <VUP>, [ Up ] };
+    key <DOWN> { overlay1 = <VDN>, [ Down ] };
     key <LEFT> { [ Left ] };
-    key <DOWN> { [ Down ] };
     key <RGHT> { [ Right ] };
 
     key <VLUP> { [ Next ] };
