@@ -1,0 +1,1 @@
+SUBSYSTEM=="input", ATTRS{phys}=="isa0060/serio0/input0", SYMLINK+="input/by-id/laptop_keyboard"
