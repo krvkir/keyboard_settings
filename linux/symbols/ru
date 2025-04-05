@@ -70,8 +70,8 @@ xkb_symbols "common" {
     key <AC07> { overlay1 = <VJ>, [ Cyrillic_o, Cyrillic_O, 7 ] };
     key <AC08> { overlay1 = <VK>, [ Cyrillic_el, Cyrillic_EL, 8 ] };
     key <AC09> { overlay1 = <VL>, [ Cyrillic_de, Cyrillic_DE, 9 ] };
-    key <AC10> { overlay1 = <VSEM>, [ Control_R, Control_R, 0 ] };
-    key <AC11> { overlay1 = <VAPO>, [ Cyrillic_e, Cyrillic_E, 0 ] };
+    key <AC10> { overlay1 = <VSEM>, [ Cyrillic_zhe, Cyrillic_ZHE, 0 ] };
+    key <AC11> { overlay1 = <VAPO>, [ Cyrillic_e, Cyrillic_E ] };
 
     key <AB01> { overlay1 = <VZ>, [ Cyrillic_ya, Cyrillic_YA, exclam ] };
     key <AB02> { overlay1 = <VX>, [ Cyrillic_che, Cyrillic_CHE, at ] };

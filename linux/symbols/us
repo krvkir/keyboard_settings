@@ -1,4 +1,4 @@
-// -*-mode: C-*-
+// -*-mode: xkb-*-
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
     key.type = "FOUR_LEVEL";
@@ -59,10 +59,8 @@ xkb_symbols "basic" {
     key <AC07> { overlay1 = <VJ>, [ j, J, 7 ] };
     key <AC08> { overlay1 = <VK>, [ k, K, 8 ] };
     key <AC09> { overlay1 = <VL>, [ l, L, 9 ] };
-    // Inputting "0" does work in Emacs but doesn't work in Logseq
-    // or TiddlyWiki (or any other Electron app?).
-    key <AC10> { overlay1 = <VSEM>, [ Control_R, Control_R, 0] };
-    key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl, 0 ] };
+    key <AC10> { overlay1 = <VSEM>, [ semicolon, colon, 0] };
+    key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl ] };
     
     key <AB01> { overlay1 = <VZ>, [ z, Z, exclam ] };
     key <AB02> { overlay1 = <VX>, [ x, X, at ] };

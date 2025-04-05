@@ -1,7 +1,6 @@
-// -*-mode: C-*-
+// -*-mode: xkb-*-
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "pc105" {
-
     key <ESC> { [ Escape ] };
 
     // The extra key on many European keyboards:
