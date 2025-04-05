@@ -64,65 +64,64 @@ xkb_symbols "virtualkeys" {
 
     // Numbers row
     // ... left side
-    key <VGRA> { [ grave, asciitilde, Escape ] };
-    key <V1> { [ F1 ] };
-    key <V2> { [ F2 ] };
-    key <V3> { [ F3 ] };
-    key <V4> { [ F4 ] };
-    key <V5> { [ F5 ] };
-    key <V6> { [ NoSymbol ] };
+    key <VGRA> { [ NoSymbol ] };
+    key <V1> { [ NoSymbol ] };
+    key <V2> { [ NoSymbol ] };
+    key <V3> { [ NoSymbol ] };
+    key <V4> { [ NoSymbol ] };
+    key <V5> { [ NoSymbol ] };
     // ... right side
+    key <V6> { [ NoSymbol ] };
     key <V7> { [ emdash, endash ] };
     key <V8> { [ NoSymbol ] };
     key <V9> { [ approxeq, notequal, plusminus ] };
     key <V0> { [ NoSymbol ] };
-    key <VMIN> { [ bracketleft, braceleft ] };
-    key <VEQU> { [ bracketright, braceright ] };
+    key <VMIN> { [ NoSymbol ] };
+    key <VEQU> { [ NoSymbol ] };
     
     // First row
     // ... left side
-    key <VTAB> { actions=[ RedirectKey(key=<TAB>, modifiers=Control, clearmods=Super) ] };
-    //key <VQ> { actions=[ RedirectKey(key=<AD01>, modifiers=Control, clearmods=Super) ] };
-    key <VQ> { actions=[ RedirectKey(key=<PGUP>) ] };
-    key <VW> { actions=[ RedirectKey(key=<PGDN>) ] };
-    key <VE> { actions=[ RedirectKey(key=<BKSP>, modifiers=Control, clearmods=Super) ]};
-    key <VR> { actions=[ RedirectKey(key=<DELE>, modifiers=Control, clearmods=Super) ]};
-    key <VT> { [ equal, plus, equal, plus ] };
+    key <VTAB> { [ NoSymbol ] };
+    key <VQ> { [ NoSymbol ] };
+    key <VW> { [ NoSymbol ] };
+    key <VE> { [ NoSymbol ] };
+    key <VR> { [ NoSymbol ] };
+    key <VT> { [ NoSymbol ] };
     // ... right side  
-    key <VY> { [ minus, underscore, emdash, endash ] };
-    key <VU> { actions=[ RedirectKey(key=<LEFT>, modifiers=Control, clearmods=Super) ] };
-    key <VI> { actions=[ RedirectKey(key=<UP>) ] };
-    key <VO> { actions=[ RedirectKey(key=<RGHT>, modifiers=Control, clearmods=Super) ] };
-    key <VP> { [ backslash, bar ] };
+    key <VY> { [ NoSymbol ] };
+    key <VU> { [ NoSymbol ] };
+    key <VI> { [ NoSymbol ] };
+    key <VO> { [ NoSymbol ] };
+    key <VP> { [ NoSymbol ] };
     key <VLBR> { [ bracketleft, braceleft ] };
     key <VRBR> { [ bracketright, braceright ] };
     
     // Second row
     // ... left side
-    key <VA> { [ Tab ] };
-    key <VS> { [ Return ] };
-    key <VD> { actions=[ RedirectKey(key=<BKSP>)] };
-    key <VF> { actions=[ RedirectKey(key=<DELE>)] };
-    key <VG> { actions=[ RedirectKey(key=<ESC>)] };
+    key <VA> { [ NoSymbol ] };
+    key <VS> { [ NoSymbol ] };
+    key <VD> { [ NoSymbol ] };
+    key <VF> { [ NoSymbol ] };
+    key <VG> { [ NoSymbol ] };
     // ... right side
-    key <VH> { [ grave, asciitilde ] };
-    key <VJ> { actions=[ RedirectKey(key=<LEFT>)]};
-    key <VK> { actions=[ RedirectKey(key=<DOWN>)]};
-    key <VL> { actions=[ RedirectKey(key=<RGHT>)]};
+    key <VH> { [ NoSymbol ] };
+    key <VJ> { [ NoSymbol ] };
+    key <VK> { [ NoSymbol ] };
+    key <VL> { [ NoSymbol ] };
     key <VSEM> {[ semicolon, colon ] };
     key <VAPO> {[ apostrophe, quotedbl ] };
-    key <VRTN> { actions=[ RedirectKey(key=<RTRN>, modifiers=Control, clearmods=Super) ] };
+    key <VRTN> { [ NoSymbol ] };
 
     // Third row
     // ... left side
-    key <VZ> { actions=[ RedirectKey(key=<AB01>, modifiers=Control, clearmods=Super) ] };
-    key <VX> { actions=[ RedirectKey(key=<AB02>, modifiers=Control, clearmods=Super) ] };
-    key <VC> { actions=[ RedirectKey(key=<AB03>, modifiers=Control, clearmods=Super) ] };
-    key <VV> { actions=[ RedirectKey(key=<AB04>, modifiers=Control, clearmods=Super) ] };
-    key <VB> { actions=[ RedirectKey(key=<AB05>, modifiers=Control, clearmods=Super) ] };
+    key <VZ> { [ NoSymbol ] };
+    key <VX> { [ NoSymbol ] };
+    key <VC> { [ NoSymbol ] };
+    key <VV> { [ NoSymbol ] };
+    key <VB> { [ NoSymbol ] };
     // ... right side
-    key <VN> { actions=[ RedirectKey(key=<HOME>)] };
-    key <VM> { actions=[ RedirectKey(key=<END>)] };
+    key <VN> { [ NoSymbol ] };
+    key <VM> { [ NoSymbol ] };
     key <VCOM> { [ comma, less ] } ;
     key <VPER> { [ period, greater ] };
     key <VSLA> { [ slash, question ] };

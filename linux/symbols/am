@@ -1,4 +1,4 @@
-// -*-mode: C-*-
+// -*-mode: xkb-*-
 default partial alphanumeric_keys
 xkb_symbols "basic" {
     key.type = "FOUR_LEVEL";

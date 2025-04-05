@@ -1,4 +1,4 @@
-// -*-mode: C-*-
+// -*-mode: xkb-*-
 # coding: utf-8
 
 // Overlays and actions are used because of Freeplane's swing interface library
@@ -10,21 +10,6 @@ xkb_symbols "common" {
     name[Group1]= "Russian";
 
     // Use the same symbols on shifted row as English layout uses.
-    //key <TLDE> { overlay1 = <VGRA>, [ Cyrillic_io, Cyrillic_IO, Escape ] };
-    // key <AE01> { overlay1 = <V1>, [  ] };    
-    // key <AE02> { overlay1 = <V2>, [  ] };
-    //key <AE03> { overlay1 = <V3>, [ Cyrillic_io, Cyrillic_IO ] };
-    // key <AE04> { overlay1 = <V4>, [  ] };
-    // key <AE05> { overlay1 = <V5>, [  ] };
-    // key <AE06> { overlay1 = <V6>, [  ] };
-    // key <AE07> { overlay1 = <V7>, [  ] };
-    //key <AE08> { overlay1 = <V8>, [ Cyrillic_zhe, Cyrillic_ZHE, period, comma ] };
-    // key <AE09> { overlay1 = <V9>, [  ] };
-    // key <AE10> { overlay1 = <V0>, [  ] };
-    // key <AE11> { overlay1 = <VMIN>, [  ] };
-    // key <AE12> { overlay1 = <VEQU>, [  ] };
-
-
     key <TLDE> { overlay1 = <VGRA>, [ grave, asciitilde, Escape ] };
     key <AE01> { overlay1 = <V1>, [ 1, exclam ] };
     key <AE02> { overlay1 = <V2>, [ 2, at ] };
@@ -37,14 +22,8 @@ xkb_symbols "common" {
     key <AE09> { overlay1 = <V9>, [ 9, parenleft ] };
     key <AE10> { overlay1 = <V0>, [ 0, parenright ] };
     key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
-    key <AE12> { overlay1 = <VEQU>, [ equal, plus ] };
-
-    key <KPSU> { [ Cyrillic_zhe, Cyrillic_ZHE ] };
-    key <KPAD> { [ Cyrillic_io, Cyrillic_IO ] };
-    
-    key <V8> { [ Cyrillic_zhe, Cyrillic_ZHE ] };
-    key <V9> { [ Cyrillic_io, Cyrillic_IO ] };
-    
+    key <AE12> { overlay1 = <VEQU>, [ equal, plus ] };  
+   
     key <BKSL> { [ backslash, bar ] };
     key <LSGT> { [ slash, bar ] };
 
@@ -82,5 +61,5 @@ xkb_symbols "common" {
     key <AB07> { overlay1 = <VM>, [ Cyrillic_softsign, Cyrillic_SOFTSIGN, ampersand ] };
     key <AB08> { overlay1 = <VCOM>, [ Cyrillic_be, Cyrillic_BE, asterisk ] };
     key <AB09> { overlay1 = <VPER>, [ Cyrillic_yu, Cyrillic_YU, parenleft ] };
-    key <AB10> { overlay1 = <VSLA>, [ slash, question, parenright ] }; 
+    key <AB10> { overlay1 = <VSLA>, [ Cyrillic_io, Cyrillic_IO, parenright ] }; 
 };
