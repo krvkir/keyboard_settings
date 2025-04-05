@@ -368,6 +368,7 @@ xkb_keycodes "virtual_keys" {
     <VM> = 212;
     <VCOM> = 214;
     <VPER> = 216;
+    <VSLA> = 217;
   
     <VUP> = 219;
     <VDN> = 220;

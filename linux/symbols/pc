@@ -129,7 +129,6 @@ xkb_symbols "virtualkeys" {
     // Extra
     key <VUP> { [ parenleft ] };
     key <VDN> { [ parenright ] };
-
 };
 
 hidden partial alphanumeric_keys

@@ -37,6 +37,7 @@
 ;; With KMonad, we can have a single main config for all the OSes and a thin layer
 ;; of OS-dependent customizations. E.g. we can greatly simplify X11 overlay.
 
+
 (defsrc
   grv  1    2    3    4    5              6    7    8    9    0    ]
   tab  q    w    e    r    t              y    u    i    o    p    [
@@ -101,7 +102,7 @@
   _    f1   f2   f3   f4   f5             @O6  @O7  @O8  @O9  @O0  @O]
   _    pgup pgdn @Cbs @Cdl =              -    @Clt up   @Crt \    @O[
   caps tab  ret  bspc del  esc            grv  left down rght @O;  @O'
-  _    C-z  C-x  C-c  C-v  C-b            home ins  @O, @O.   @O/  _
+  _    C-z  C-x  C-c  C-v  C-b            home end  @O, @O.   @O/  _
             S-9  S-0  _    _    _    _    @Cr  _    @O[ @O]
 )
 
