@@ -9,6 +9,19 @@ xkb_symbols "pc105" {
     // The following keys are common to all layouts.
     key <BKSL> { [ backslash, bar ] };
     key <SPCE> { [ space ] };
+    key <TLDE> { overlay1 = <VGRA>, [ grave, asciitilde, Escape ] };
+    key <AE01> { overlay1 = <V1>, [ 1, exclam ] };
+    key <AE02> { overlay1 = <V2>, [ 2, at ] };
+    key <AE03> { overlay1 = <V3>, [ 3, numbersign ] };
+    key <AE04> { overlay1 = <V4>, [ 4, dollar ] };
+    key <AE05> { overlay1 = <V5>, [ 5, percent ] };
+    key <AE06> { overlay1 = <V6>, [ 6, asciicircum ] };
+    key <AE07> { overlay1 = <V7>, [ 7, ampersand ] };
+    key <AE08> { overlay1 = <V8>, [ 8, asterisk ] };
+    key <AE09> { overlay1 = <V9>, [ 9, parenleft ] };
+    key <AE10> { overlay1 = <V0>, [ 0, parenright ] };
+    key <AE11> { overlay1 = <VMIN>, [ minus, underscore ] };
+    key <AE12> { overlay1 = <VEQU>, [ equal, plus ] };
 
     include "srvr_ctrl(fkey2vt)"
     include "pc(editing)"
@@ -23,16 +36,16 @@ xkb_symbols "pc105" {
     key <TAB> { overlay1 = <VTAB>, [ Tab, ISO_Left_Tab ] };
     key <RTRN> { overlay1 = <VRTN>, [ Return ] };
 
-    // key <CAPS> { [ ISO_Level3_Shift ] };
     key <NMLK> { [ Num_Lock ] };
 
     key <LFSH> { [ Shift_L ] };
     key <RTSH> { [ Shift_R ] };
 
     key <LCTL> { [ Control_L ] };
-    key <RCTL> { [ Control_R ] };
 
-    key <HYPR> { [ ISO_Level3_Shift ] };
+    // Languages and symbols are switched via right alt and ctrl.
+    key <RCTL> { [ ISO_Level3_Shift ] };
+    key <HYPR> { [ ISO_Next_Group, Multi_key ] };
 
     key <LALT> { [ Alt_L, Meta_L ] };
     key <RALT> { [ Alt_R, Meta_R ] };
