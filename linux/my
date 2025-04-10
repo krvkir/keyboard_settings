@@ -1,4 +1,4 @@
-// -*-mode: C-*-
+// -*-mode: xkb-*-
 // Look for default configs here:
 // /usr/share/X11/xkb/
 xkb_keymap {
@@ -6,11 +6,7 @@ xkb_keymap {
     xkb_types { include "complete+numpad(mac)" };
     xkb_compat { include "complete" };
     xkb_symbols {
-        include "pc+us+ru:2+inet(evdev)"
-	//	include "pc+us+ru(common):2+am(phonetic):3+inet(evdev)"
-        // include "group(shifts_toggle)"
-        include "group(alt_shift_toggle)"
-	// include "group(alt_space_toggle)"
+            include "pc+us+ru:2+inet(evdev)"
+            //include "pc+us+ru:2+am(phonetic):3+inet(evdev)"
     };
-    // xkb_geometry { include "custom(thinkpad_s1)"	};
 };
