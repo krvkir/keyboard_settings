@@ -10,31 +10,35 @@ xkb_symbols "common" {
     name[Group1]= "Russian";
 
     // Use the same symbols on shifted number row as English layout uses.
-   
+
+    // Added symbols from other cyrillic languages:
+    // ўЎ њЊ ґҐ ћЋ їЇ
+    // іІ љЉ ђЂ єЄ
+      
     key <AD01> { overlay1 = <VQ>, [ Cyrillic_shorti, Cyrillic_SHORTI ] };
     key <AD02> { overlay1 = <VW>, [ Cyrillic_tse, Cyrillic_TSE ] };
-    key <AD03> { overlay1 = <VE>, [ Cyrillic_u, Cyrillic_U ] };
+    key <AD03> { overlay1 = <VE>, [ Cyrillic_u, Cyrillic_U, Byelorussian_shortu, Byelorussian_SHORTU ] };
     key <AD04> { overlay1 = <VR>, [ Cyrillic_ka, Cyrillic_KA ] };
     key <AD05> { overlay1 = <VT>, [ Cyrillic_ie, Cyrillic_IE ] };
-    key <AD06> { overlay1 = <VY>, [ Cyrillic_en, Cyrillic_EN ] };
-    key <AD07> { overlay1 = <VU>, [ Cyrillic_ghe, Cyrillic_GHE ] };
+    key <AD06> { overlay1 = <VY>, [ Cyrillic_en, Cyrillic_EN, Cyrillic_nje,   Cyrillic_NJE ] };
+    key <AD07> { overlay1 = <VU>, [ Cyrillic_ghe, Cyrillic_GHE, Ukrainian_ghe_with_upturn, Ukrainian_GHE_WITH_UPTURN ] };
     key <AD08> { overlay1 = <VI>, [ Cyrillic_sha, Cyrillic_SHA ] };
-    key <AD09> { overlay1 = <VO>, [ Cyrillic_shcha, Cyrillic_SHCHA ] };
+    key <AD09> { overlay1 = <VO>, [ Cyrillic_shcha, Cyrillic_SHCHA, Serbian_tshe,   Serbian_TSHE ] };
     key <AD10> { overlay1 = <VP>, [ Cyrillic_ze, Cyrillic_ZE ] };
     key <AD11> { overlay1 = <VLBR>, [ Cyrillic_ha, Cyrillic_HA ] };
-    key <AD12> { overlay1 = <VRBR>, [ Cyrillic_hardsign, Cyrillic_HARDSIGN ] };
+    key <AD12> { overlay1 = <VRBR>, [ Cyrillic_hardsign, Cyrillic_HARDSIGN, Ukrainian_yi,    Ukrainian_YI ] };
 
     key <AC01> { overlay1 = <VA>, [ Cyrillic_ef, Cyrillic_EF ] };
-    key <AC02> { overlay1 = <VS>, [ Cyrillic_yeru, Cyrillic_YERU ] };
+    key <AC02> { overlay1 = <VS>, [ Cyrillic_yeru, Cyrillic_YERU, Ukrainian_i,     Ukrainian_I ] };
     key <AC03> { overlay1 = <VD>, [ Cyrillic_ve, Cyrillic_VE ] };
     key <AC04> { overlay1 = <VF>, [ Cyrillic_a, Cyrillic_A ] };
     key <AC05> { overlay1 = <VG>, [ Cyrillic_pe, Cyrillic_PE ] };
     key <AC06> { overlay1 = <VH>, [ Cyrillic_er, Cyrillic_ER ] };
     key <AC07> { overlay1 = <VJ>, [ Cyrillic_o, Cyrillic_O ] };
-    key <AC08> { overlay1 = <VK>, [ Cyrillic_el, Cyrillic_EL ] };
+    key <AC08> { overlay1 = <VK>, [ Cyrillic_el, Cyrillic_EL, Cyrillic_lje,   Cyrillic_LJE ] };
     key <AC09> { overlay1 = <VL>, [ Cyrillic_de, Cyrillic_DE ] };
-    key <AC10> { overlay1 = <VSEM>, [ Cyrillic_zhe, Cyrillic_ZHE ] };
-    key <AC11> { overlay1 = <VAPO>, [ Cyrillic_e, Cyrillic_E ] };
+    key <AC10> { overlay1 = <VSEM>, [ Cyrillic_zhe, Cyrillic_ZHE, Serbian_dje,    Serbian_DJE ] };
+    key <AC11> { overlay1 = <VAPO>, [ Cyrillic_e, Cyrillic_E, Ukrainian_ie,    Ukrainian_IE ] };
 
     key <AB01> { overlay1 = <VZ>, [ Cyrillic_ya, Cyrillic_YA ] };
     key <AB02> { overlay1 = <VX>, [ Cyrillic_che, Cyrillic_CHE ] };
