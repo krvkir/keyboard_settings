@@ -1,14 +1,14 @@
 // -*-mode: xkb-*-
 // translation from evdev scancodes to something resembling xfree86 keycodes.
 
-default xkb_keycodes "evdev" {
+default xkb_keycodes "main"  {
     minimum = 8;
     maximum = 255;
 
-    include "evdev(virtual_keys)"
-    include "evdev(keypad)"
-    //include "evdev(mod_hypr_lalt)"
-    include "evdev(mod_hypr_ralt)"
+    include "kk_evdev(virtual_keys)"
+    include "kk_evdev(keypad)"
+    //include "kk_evdev(mod_hypr_lalt)"
+    include "kk_evdev(mod_hypr_ralt)"
       
     // Added for pc105 compatibility
     <LSGT> = 94;
@@ -108,10 +108,10 @@ default xkb_keycodes "evdev" {
     <HOME> = 110;
     <PGUP> = 112;
     <DELE> = 119;
-    // <END> = 115;
-    // <INS> = 118;
-    <END> = 118;
-    <INS> = 115;
+    <END> = 115;
+    <INS> = 118;
+    //<END> = 118;
+    //<INS> = 115;
     <PGDN> = 117;
 
     <UP> = 111;

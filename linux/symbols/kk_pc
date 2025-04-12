@@ -24,11 +24,11 @@ xkb_symbols "pc105" {
     key <AE12> { overlay1 = <VEQU>, [ equal, plus ] };
 
     include "srvr_ctrl(fkey2vt)"
-    include "pc(editing)"
+    include "kk_pc(editing)"
     include "keypad(x11)"
-    include "pc(virtualkeys)"
-    include "pc(overlay1_switch_caps)"
-    //include "pc(overlay2_switch_lalt)"
+    include "kk_pc(virtualkeys)"
+    include "kk_pc(overlay1_switch_caps)"
+    //include "kk_pc(overlay2_switch_lalt)"
 
     key <BKSP> { [ BackSpace, BackSpace ] };
 
