@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <layoutList>
+    <layout>
+      <configItem>
+	<name>kk_pc</name>
+	<shortDescription>kk: pc</shortDescription>
+	<description>kk: common symbols and virtual keys</description>
+	<languageList>
+	  <iso639Id>eng</iso639Id>
+	</languageList>
+      </configItem>
+    </layout>
+    <layout>
+      <configItem>
+	<name>kk_en</name>
+	<shortDescription>EN</shortDescription>
+	<description>kk: latin symbols: english, deutsch etc</description>
+	<languageList>
+	  <iso639Id>eng</iso639Id>
+	  <iso639Id>deu</iso639Id>
+	</languageList>
+      </configItem>
+    </layout>
+    <layout>
+      <configItem>
+	<name>kk_ru</name>
+	<shortDescription>RU</shortDescription>
+	<description>kk: cyrillics symbols: russian, ukrainian, serbian etc</description>
+	<languageList>
+	  <iso639Id>rus</iso639Id>
+	  <iso639Id>ukr</iso639Id>
+	  <iso639Id>srp</iso639Id>
+	</languageList>
+      </configItem>
+    </layout>
+  </layoutList>
+</xkbConfigRegistry>
