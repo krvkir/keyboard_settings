@@ -1,7 +1,7 @@
 #+TITLE: Keyboard settings
 
 #+CAPTION: Extra layout enabled by CapsLock key
-[[./layout-2025-02-16.png]]
+[[./layout.png]]
 
 (Thanks keyboard-layout-editor.com for the image!)
 
@@ -9,14 +9,16 @@
 
 Keyboard settings bringing hardly-reachable keys to your home row (or as close to it as possible):
 
-- arrows, page up/down, home/end
-- control and alt (hello, emacsers)
-- delete, backspace
-- f-keys
-- tilde, backquote, underscore, hyphen and equals
-- even jump-to-next/previous-word and delete-next/previous-word
+- arrows, page up/down, home/end;
+- control and alt (hello, emacsers);
+- delete, backspace;
+- f-keys;
+- even jump-to-next/previous-word and delete-next/previous-word;
+- tilde, backquote, underscore, hyphen and equals;
+- esszet and umlauts for latin layout, serbian/ukrainian/belorussian letters for cyrillic layout (works only on linux).
+  
 
-Works on Linux. (There are working Windows and Mac versions but they're dated since I don't live in those OS now — commits are welcome!)
+Tested on Linux but should work on Windows and Mac too, thanks KMonad.
 
 * Why bother
 
@@ -32,25 +34,17 @@ And you can have all these goodies both on Linux, Windows and Mac. (Ok, for the 
 
 Of course there are disadvantages:
 
-- you will need to get familiar with new settings
 - you will suffer a little (but not that much) each time you work on someone else's computer for a long time (but you can do a good deed and supply them with the layout ;)
+- you will need to get familiar with new settings
 
 * Installation
 
 On linux (X11):
 
-1. put this line into your .xprofile or whatever:
+0. Find out what is your keyboard name in ~/dev/input/by-id/~ folder and write it into ~./kmonad/main.kbd~ file. If you can't find it, use evtest and xinput to find out its vendor and add an ~udev~ rule to tell linux to add an alias for your keyboard.
+1. Install ~komnad~ and add ~kmonad ./kmonad/main.kbd~ to your preferred autolauncher (there's ~systemd~ service template for your convenience).
+2. Put this line into your .xprofile or whatever:
 ~xkbcomp -I"$HOME/.config/xkb" $HOME/.config/xkb/my $DISPLAY~
-
-On Windows:
-
-1. install AutoHotkey
-2. put the script into autorun somehow
-
-On mac:
-
-1. install Karabiner
-2. run the script
 
 * How to use
 
@@ -74,51 +68,40 @@ Combos:
 - ~u~ = ctrl-left (usually jump to the beginning of the word), ~o~ = ctrl-right (usually jumps to the end of the word);
 - ~e~ = ctrl-backspace (usually deletes from the cursor to the beginning of the word), ~r~ = ctrl-delete (usually deletes from the cursor to the end of the word).
 
-The most controversial change is of course Ctrl in the home row, on the place where once Semicolon lived, and Alt just below the Control on the Slash / Question Mark key.
-- this remap appeared to be a life changer for advanced Emacs usage;
-- you even can press those two buttons at once with your pinky, making terrible `C-M-...` bindings comfy;
-- Semicolon and Slash are now on the overlay, and it's fine, since you'll already be holding Overlay key (ex CapsLock) pressed most of the time.
+Home-row functional keys:
+
+- when you tap the key, it sends the letter which is written on it;
+- if you hold it, it works as modifier key.
+
+Sometimes it leads to mis-hits (as Ctrl-R when you type "keybo**ar**d"), but for programming needs those caveats are greatly overweighted. Still you can disable home-row functional keys by editing ~main.kbd~.
 
 ** Numbers and Symbols
 
-To activate the layer with numbers and symbols, press Right Alt:
-
-- home row (asdf...) holds digits;
-- the row below the home row (zxcv...) holds symbols which are usually available on Shift-<digit>;
-- the row above the home row (qwer...) holds F-keys.
+There's a small digits layer which places all digits near the home row on the right part of the keyboard. To activate digits layer, hold space. You can add extra symbols on this layer, see ~main.kbd~.
 
 ** Extra Symbols
 
-Because we've put digits and symbols into the layer, we now can map frequently used symbols to the number buttons. The best keys there are 234 and 789 because they're easily reachable with the longer fingers.
+Since we have Level3 shift instead of rarely-used right control, we can map extra keys right onto the main part of the keyboard. In my version, there are:
+
+- german symbols (ß, ä, ö, ü) on s, a, o, u keys;
+- cyrillic symbols from serbian, ukraininan and belorussian layouts (ўЎ њЊ ґҐ ћЋ їЇ іІ љЉ ђЂ єЄ).
+
+(This feature currently works only on Linux, but you can write an autohotkey/karabiner scripts for Windows and MacOS.)
 
 * Details
-** Why some keys on the overlay behave the same way as on latin layout without an overlay?
+** Why ~kmonad~?
 
-Because, when you're not on latin layout, you need to switch layout to latin one and back to enter, say, quotation sign or square bracket. It's easier to enter those symbols holding the overlay activator and pressing a button you used to press in latin layout.
+On Linux, Kmonad works close to the kernel, which means lesser latency and more stability: no more glitches in too-clever app frameworks like Java Swing or Electron. Also, separating layout in two parts makes debugging easier: you don't fear to ruin your ~xkb~ part and lose ability to enter basic symbols.
 
-** How does it work?
+What's more important, ~kmonad~ is cross-platform.
 
-On Linux it is implemented via xkb config files. I'm idly thinking about rewriting it using Evermap or Xremap to support Wayland.
-
-On Windows it is an [[https://autohotkey.com/][AutoHotkey]] script. On Mac I found that Karabiner can handle the job.
-
-** Why not to use level 3 symbols instead of overlays?
-
-Because overlays work in java swing apps like Freeplane and level 3 symbols don't.
-
-Actually, level 3 actions work in Freeplane's main interface but don't work in node editors. Neither in inline one nor in dialog one. And it is critical to have them work there.
+And, what's even more important, ~kmonad~ makes home-row modifers and other nice tricks previously possible only on QMK-based keyboards, available on any standard keyboard, including laptop keyboards.
 
 ** On Linux, the layout settings reset to defaults each time I switch the language.
 
 Your desktop environment may try to manage layouts by itself. I faced this problem on XFCE4 when tried to get keyboard layout indicator work.
 
 On XFCE, it helped to remove all the layouts from XFCE keyboard manager, keeping the only English layout. It made XFCE stop switching layout by itself and ruining my settings. This is very inconvenient, but for now I haven't found the proper solution, sorry.
-
-** Now how I enter Cyrillic letter Ж?
-
-Just switch to Cyrillic layout and type semicolon. You still can use it as Control when you hold it (didn't planned this, but somehow it works this way).
-
-Be aware that the Slash key won't work this way, it is just regular Alt. You can enter dot and comma (which reside on this key on Cyrillic layouts) from the overlay.
 
 * References
 
