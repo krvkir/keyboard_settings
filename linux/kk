@@ -6,7 +6,7 @@ xkb_keymap {
     xkb_types { include "complete+numpad(mac)" };
     xkb_compat { include "complete" };
     xkb_symbols {
-            include "kk_pc+kk_en+kk_ru:2+inet(evdev)"
+            include "kk_en+kk_ru:2+inet(evdev)"
             //include "kk_pc+kk_en+kk_ru:2+kk_am(phonetic):3+inet(evdev)"
     };
 };

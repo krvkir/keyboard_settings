@@ -1,6 +1,6 @@
 (defcfg
   ;; For Linux
-  input  (device-file "/dev/input/by-id/laptop_keyboard")
+  input  (device-file "/dev/input/by-id/eyelash_sofle_keyboard")
   output (uinput-sink "KMonad output"
 		       ;; To understand the importance of the following line, see the section on
 		       ;; Compose-key sequences at the near-bottom of this file.
@@ -39,11 +39,11 @@
 
 
 (defsrc
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
+  grv  1    2    3    4    5              6    7    8    9    0    ]
+  tab  q    w    e    r    t              y    u    i    o    p    [
+  caps a    s    d    f    g              h    j    k    l    ;    '
+  lsft z    x    c    v    b              n    m    ,    .    /    rsft
+            up   down lalt spc  lmet lctl ret  ralt -    =  
 )
 
 
@@ -56,18 +56,18 @@
   Mf (tap-hold-next-release 300 f lmet) ;; Bind num to a button that switches to a layer
   Mj (tap-hold-next-release 300 j lmet) ;; Bind num to a button that switches to a layer
   Mk (tap-hold-next-release 300 k rsft) ;; Bind num to a button that switches to a layer
-  Ml (tap-hold-next-release 300 l lalt) ;; Bind num to a button that switches to a layer
-  Msc (tap-hold-next-release 300 ; lctl) ;; Bind num to a button that switches to a layer
+  Ml (tap-hold-next-release 200 l lalt) ;; Bind num to a button that switches to a layer
+  Msc (tap-hold-next-release 200 ; lctl) ;; Bind num to a button that switches to a layer
   Msp (tap-hold-next-release 300 spc @mou)
   )
 
 
 (deflayer qwerty
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @nav @Ma  @Ms  @Md  @Mf  g    h    @Mj  @Mk  @Ml  @Msc  '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           @Msp           ralt rmet cmp  rctl
+  grv  1    2    3    4    5              6    7    8    9    0    ]
+  tab  q    w    e    r    t              y    u    i    o    p    [
+  @nav @Ma  @Ms  @Md  @Mf  g              h    @Mj  @Mk  @Ml  @Msc '
+  lsft z    x    c    v    b              n    m    ,    .    /    rsft
+            up   down lalt @Msp lmet rctl ret  ralt -    =  
 )
 
 
@@ -102,18 +102,18 @@
 
 
 (deflayer navigation
-  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  _    _    _
-  @Ct  pgup pgdn @Cbs @Cdl =    -    @Clt up   @Crt \    @O[  @O]  \
-  caps tab  ret  bspc del  esc  grv  left down rght @O;  @O'  @Cr
-  _    C-z  C-x  C-c  C-v  C-b  home end  @O, @O.   @O/  _
-  _    _    _              _              _    _    _    _
+  _    f1   f2   f3   f4   f5             f6   f7   f8   f9   f10  @O]
+  @Ct  pgup pgdn @Cbs @Cdl =              -    @Clt up   @Crt \    @O[
+  caps tab  ret  bspc del  esc            grv  left down rght @O;  @O'
+  _    C-z  C-x  C-c  C-v  C-b            home end  @O, @O.   @O/  _
+            S-9  S-0  _    _    _    _    @Cr  _    @O[ @O]
 )
+
 
 (deflayer mouse
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
-  _    _    _    _    _    _    _    1    2    3    4    _    _    _
-  _    _    _    _    _    _    _    5    6    7    8    _    @Mr
-  _    _    _    _    _    _    9    0    _    _    _    _
-  _    _    _              _              _    _    _    _
+  _    _    _    _    _    _              _    _    _    _    _    _
+  _    _    _    _    _    _              _    1    2    3    4    _
+  _    _    _    _    _    _              _    5    6    7    8    _
+  _    _    _    _    _    _              9    0    _    _    _    _
+            _    _    _    _    _    _    @Mr  _    _    _  
 )
-
