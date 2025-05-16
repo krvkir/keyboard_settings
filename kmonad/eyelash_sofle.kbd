@@ -48,28 +48,37 @@
 
 
 (defalias
-  nav (layer-toggle navigation) ;; Bind num to a button that switches to a layer
-  mou (layer-toggle mouse) ;; Bind num to a button that switches to a layer
-  Ma (tap-hold-next-release 300 a lctl) ;; Bind num to a button that switches to a layer
-  Ms (tap-hold-next-release 300 s lalt) ;; Bind num to a button that switches to a layer
-  Md (tap-hold-next-release 300 d lsft) ;; Bind num to a button that switches to a layer
-  Mf (tap-hold-next-release 300 f lmet) ;; Bind num to a button that switches to a layer
-  Mj (tap-hold-next-release 300 j lmet) ;; Bind num to a button that switches to a layer
-  Mk (tap-hold-next-release 300 k rsft) ;; Bind num to a button that switches to a layer
-  Ml (tap-hold-next-release 200 l lalt) ;; Bind num to a button that switches to a layer
-  Msc (tap-hold-next-release 200 ; lctl) ;; Bind num to a button that switches to a layer
+  nav (layer-toggle navigation)
+  mou (layer-toggle mouse)
+  nul (layer-switch null)
+  qwe (layer-switch qwerty)
+  Ma (tap-hold-next-release 300 a lctl)
+  Ms (tap-hold-next-release 300 s lalt)
+  Md (tap-hold-next-release 300 d lsft)
+  Mf (tap-hold-next-release 300 f lmet)
+  Mj (tap-hold-next-release 300 j lmet)
+  Mk (tap-hold-next-release 300 k rsft)
+  Ml (tap-hold-next-release 200 l lalt)
+  Msc (tap-hold-next-release 200 ; lctl)
   Msp (tap-hold-next-release 300 spc @mou)
   )
 
 
 (deflayer qwerty
-  grv  1    2    3    4    5              6    7    8    9    0    ]
+  @nul 1    2    3    4    5              6    7    8    9    0    ]
   tab  q    w    e    r    t              y    u    i    o    p    [
   @nav @Ma  @Ms  @Md  @Mf  g              h    @Mj  @Mk  @Ml  @Msc '
   lsft z    x    c    v    b              n    m    ,    .    /    rsft
             up   down lalt @Msp lmet rctl ret  ralt -    =  
 )
 
+(deflayer null
+  @qwe 1    2    3    4    5              6    7    8    9    0    ]
+  tab  q    w    e    r    t              y    u    i    o    p    [
+  @nav a    s    d    @Mf  g              h    j    @Mk  l    @Msc '
+  lsft z    x    c    v    b              n    m    ,    .    /    rsft
+            up   down lalt @Msp lmet rctl ret  ralt -    =  
+)
 
 (defalias
   Cbs C-bspc
