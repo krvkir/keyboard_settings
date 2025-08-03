@@ -1,6 +1,9 @@
 (defcfg
   ;; For Linux
-  input  (device-file "/dev/input/by-id/eyelash_sofle_keyboard")
+  ;; ;; For bluetooth:
+  ;; input  (device-file "/dev/input/by-id/eyelash_sofle_keyboard")
+  ;; For wired connection:
+  input  (device-file "/dev/input/by-id/usb-sofle_Eyelash_Sofle_62AC5CDA6B8C95E1-if02-event-kbd")
   output (uinput-sink "KMonad output"
 		       ;; To understand the importance of the following line, see the section on
 		       ;; Compose-key sequences at the near-bottom of this file.
@@ -61,6 +64,7 @@
   Ml (tap-hold-next-release 200 l lalt)
   Msc (tap-hold-next-release 200 ; lctl)
   Msp (tap-hold-next-release 300 spc @mou)
+  Mre (tap-hold-next-release 300 ret rctl)
   )
 
 
@@ -69,7 +73,7 @@
   tab  q    w    e    r    t              y    u    i    o    p    [
   @nav @Ma  @Ms  @Md  @Mf  g              h    @Mj  @Mk  @Ml  @Msc '
   lsft z    x    c    v    b              n    m    ,    .    /    rsft
-            up   down lalt @Msp lmet rctl ret  ralt -    =  
+            up   down lalt @Msp lmet lctl @Mre ralt -    =  
 )
 
 (deflayer null
@@ -77,7 +81,7 @@
   tab  q    w    e    r    t              y    u    i    o    p    [
   @nav a    s    d    @Mf  g              h    j    @Mk  l    @Msc '
   lsft z    x    c    v    b              n    m    ,    .    /    rsft
-            up   down lalt @Msp lmet rctl ret  ralt -    =  
+            up   down lalt @Msp lmet lctl @Mre ralt -    =  
 )
 
 (defalias
