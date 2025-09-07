@@ -63,15 +63,15 @@
   Mk (tap-hold-next-release 300 k rsft)
   Ml (tap-hold-next-release 200 l lalt)
   Msc (tap-hold-next-release 200 ; lctl)
-  Msp (tap-hold-next-release 300 spc @mou)
-  Mre (tap-hold-next-release 300 ret rctl)
+  Msp (tap-hold-next-release 300 spc lmet)
+  Mre (tap-hold-next-release 300 ret lmet)
   )
 
 
 (deflayer qwerty
   @nul 1    2    3    4    5              6    7    8    9    0    ]
   tab  q    w    e    r    t              y    u    i    o    p    [
-  @nav @Ma  @Ms  @Md  @Mf  g              h    @Mj  @Mk  @Ml  @Msc '
+  @nav @Ma  @Ms  @Md  f    g              h    j    @Mk  @Ml  @Msc '
   lsft z    x    c    v    b              n    m    ,    .    /    rsft
             up   down lalt @Msp lmet lctl @Mre ralt -    =  
 )
@@ -111,13 +111,25 @@
   O8 (tap-macro (around caps 8) caps)
   O9 (tap-macro (around caps 9) caps)
   O0 (tap-macro (around caps 0) caps)
+  Nf1 (tap-hold-next-release 300 1 f1)
+  Nf2 (tap-hold-next-release 300 2 f2)
+  Nf3 (tap-hold-next-release 300 3 f3)
+  Nf4 (tap-hold-next-release 300 4 f4)
+  Nf5 (tap-hold-next-release 300 5 f5)
+  Nf6 (tap-hold-next-release 300 6 f6)
+  Nf7 (tap-hold-next-release 300 7 f7)
+  Nf8 (tap-hold-next-release 300 8 f8)
+  Nf9 (tap-hold-next-release 300 9 f9)
+  Nf0 (tap-hold-next-release 300 0 f10) 
+  Nfm (tap-hold-next-release 300 - f11)
+  Nfe (tap-hold-next-release 300 = f12)
   )
 
 
 (deflayer navigation
   _    f1   f2   f3   f4   f5             f6   f7   f8   f9   f10  @O]
   @Ct  pgup pgdn @Cbs @Cdl =              -    @Clt up   @Crt \    @O[
-  caps tab  ret  bspc del  esc            grv  left down rght @O;  @O'
+  caps @Ct  ret  bspc del  esc            grv  left down rght @O;  @O'
   _    C-z  C-x  C-c  C-v  C-b            home end  @O, @O.   @O/  _
             S-9  S-0  _    _    _    _    @Cr  _    @O[ @O]
 )
@@ -125,8 +137,8 @@
 
 (deflayer mouse
   _    _    _    _    _    _              _    _    _    _    _    _
-  _    _    _    _    _    _              _    1    2    3    4    _
-  _    _    _    _    _    _              _    5    6    7    8    _
-  _    _    _    _    _    _              9    0    _    _    _    _
+  _    @Nf4 @Nf3 @Nf2 @Nf1 _              _    S-1  S-2  S-3  S-4  _
+  _    @Nf8 @Nf7 @Nf6 @Nf5 _              _    S-5  S-6  S-7  S-8  _
+  _    @Nfe @Nfm @Nf0 @Nf9 _              _    S-9  S-0  S--  S-=  _
             _    _    _    _    _    _    @Mr  _    _    _  
 )
