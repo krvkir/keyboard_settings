@@ -1,6 +1,7 @@
 (defcfg
   ;; For Linux
   input  (device-file "/dev/input/by-id/laptop_keyboard")
+  ;; input  (device-file "/dev/input/by-id/usb-ITE_Tech._Inc._ITE_Device_8910_-event-kbd")
   output (uinput-sink "KMonad output"
 		       ;; To understand the importance of the following line, see the section on
 		       ;; Compose-key sequences at the near-bottom of this file.
@@ -53,19 +54,21 @@
   Ma (tap-hold-next-release 300 a lctl) ;; Bind num to a button that switches to a layer
   Ms (tap-hold-next-release 300 s lalt) ;; Bind num to a button that switches to a layer
   Md (tap-hold-next-release 300 d lsft) ;; Bind num to a button that switches to a layer
-  Mf (tap-hold-next-release 300 f lmet) ;; Bind num to a button that switches to a layer
-  Mj (tap-hold-next-release 300 j lmet) ;; Bind num to a button that switches to a layer
+  Mf (tap-hold-next-release 300 f lsft) ;; Bind num to a button that switches to a layer
+  Mg (tap-hold-next-release 300 g lctl) ;; Bind num to a button that switches to a layer
+  Mh (tap-hold-next-release 300 h lctl) ;; Bind num to a button that switches to a layer
+  Mj (tap-hold-next-release 300 j lsft) ;; Bind num to a button that switches to a layer
   Mk (tap-hold-next-release 300 k rsft) ;; Bind num to a button that switches to a layer
   Ml (tap-hold-next-release 300 l lalt) ;; Bind num to a button that switches to a layer
   Msc (tap-hold-next-release 300 ; lctl) ;; Bind num to a button that switches to a layer
-  Msp (tap-hold-next-release 300 spc @mou)
+  Msp (tap-hold-next-release 300 spc lmet)
   )
 
 
 (deflayer qwerty
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @nav @Ma  @Ms  @Md  @Mf  g    h    @Mj  @Mk  @Ml  @Msc  '    ret
+  @nav @Ma  @Ms  @Md  @Mf  @Mg  @Mh  @Mj  @Mk  @Ml  @Msc  '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           @Msp           ralt rmet cmp  rctl
 )

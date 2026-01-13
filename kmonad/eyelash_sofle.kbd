@@ -1,9 +1,9 @@
 (defcfg
   ;; For Linux
   ;; ;; For bluetooth:
-  ;; input  (device-file "/dev/input/by-id/eyelash_sofle_keyboard")
+  input  (device-file "/dev/input/by-id/eyelash_sofle_keyboard")
   ;; For wired connection:
-  input  (device-file "/dev/input/by-id/usb-sofle_Eyelash_Sofle_62AC5CDA6B8C95E1-if02-event-kbd")
+  ;; input  (device-file "/dev/input/by-id/usb-sofle_Eyelash_Sofle_62AC5CDA6B8C95E1-if02-event-kbd")
   output (uinput-sink "KMonad output"
 		       ;; To understand the importance of the following line, see the section on
 		       ;; Compose-key sequences at the near-bottom of this file.
@@ -40,48 +40,45 @@
 ;; With KMonad, we can have a single main config for all the OSes and a thin layer
 ;; of OS-dependent customizations. E.g. we can greatly simplify X11 overlay.
 
-
+;; tab ans apostrophe are skipeed because they are duplicated in the thumbs row
 (defsrc
   grv  1    2    3    4    5              6    7    8    9    0    ]
-  tab  q    w    e    r    t              y    u    i    o    p    [
-  caps a    s    d    f    g              h    j    k    l    ;    '
+       q    w    e    r    t              y    u    i    o    p    [
+  caps a    s    d    f    g              h    j    k    l    ;
   lsft z    x    c    v    b              n    m    ,    .    /    rsft
-            up   down lalt spc  lmet lctl ret  ralt -    =  
+            up   down lalt tab  spc  ret  '    ralt -    =
 )
 
 
 (defalias
   nav (layer-toggle navigation)
   mou (layer-toggle mouse)
-  nul (layer-switch null)
   qwe (layer-switch qwerty)
   Ma (tap-hold-next-release 300 a lctl)
   Ms (tap-hold-next-release 300 s lalt)
   Md (tap-hold-next-release 300 d lsft)
-  Mf (tap-hold-next-release 300 f lmet)
-  Mj (tap-hold-next-release 300 j lmet)
+  Mf (tap-hold-next-release 300 f lctl)
+  Mg (tap-hold-next-release 300 g lctl)
+  Mh (tap-hold-next-release 300 h lctl)
+  Mj (tap-hold-next-release 300 j lctl)
   Mk (tap-hold-next-release 300 k rsft)
   Ml (tap-hold-next-release 200 l lalt)
   Msc (tap-hold-next-release 200 ; lctl)
-  Msp (tap-hold-next-release 300 spc lmet)
-  Mre (tap-hold-next-release 300 ret lmet)
+  Msp (tap-hold-next-release 300 spc @mou)
+  Mtb (tap-hold-next-release 300 tab lmet)
+  Mre (tap-hold-next-release 300 ret @nav)
+  Mla (tap-hold-next-release 300 lalt @nav)
+  Mao (tap-hold-next-release 300 ' lsft)
+  Mral (tap-hold-next-release 300 ralt rctl)
   )
 
 
 (deflayer qwerty
-  @nul 1    2    3    4    5              6    7    8    9    0    ]
-  tab  q    w    e    r    t              y    u    i    o    p    [
-  @nav @Ma  @Ms  @Md  f    g              h    j    @Mk  @Ml  @Msc '
+  grv  1    2    3    4    5              6    7    8    9    0    ]
+       q    w    e    r    t              y    u    i    o    p    [
+  @nav @Ma  @Ms  @Md  @Mf  g              h    @Mj  @Mk  @Ml  @Msc
   lsft z    x    c    v    b              n    m    ,    .    /    rsft
-            up   down lalt @Msp lmet lctl @Mre ralt -    =  
-)
-
-(deflayer null
-  @qwe 1    2    3    4    5              6    7    8    9    0    ]
-  tab  q    w    e    r    t              y    u    i    o    p    [
-  @nav a    s    d    @Mf  g              h    j    @Mk  l    @Msc '
-  lsft z    x    c    v    b              n    m    ,    .    /    rsft
-            up   down lalt @Msp lmet lctl @Mre ralt -    =  
+            up   down @Mla @Mtb @Msp @Mre @Mao @Mral -    =
 )
 
 (defalias
@@ -98,7 +95,7 @@
   ;; we add extra caps tap after each key.
   ;; The best way would be to have special key which means comma and only comma
   ;; and which doesn't depend on layout. Maybe a modifier which normally does nothing
-  ;; but can be handled at layout level. But we have only 3 modifiers. 
+  ;; but can be handled at layout level. But we have only 3 modifiers.
   O. (tap-macro (around caps .) caps)
   O, (tap-macro (around caps ,) caps)
   O/ (tap-macro (around caps /) caps)
@@ -120,7 +117,7 @@
   Nf7 (tap-hold-next-release 300 7 f7)
   Nf8 (tap-hold-next-release 300 8 f8)
   Nf9 (tap-hold-next-release 300 9 f9)
-  Nf0 (tap-hold-next-release 300 0 f10) 
+  Nf0 (tap-hold-next-release 300 0 f10)
   Nfm (tap-hold-next-release 300 - f11)
   Nfe (tap-hold-next-release 300 = f12)
   )
@@ -128,17 +125,17 @@
 
 (deflayer navigation
   _    f1   f2   f3   f4   f5             f6   f7   f8   f9   f10  @O]
-  @Ct  pgup pgdn @Cbs @Cdl =              -    @Clt up   @Crt \    @O[
-  caps @Ct  ret  bspc del  esc            grv  left down rght @O;  @O'
+       pgup pgdn @Cbs @Cdl =              -    @Clt up   @Crt \    @O[
+  caps @Ct  ret  bspc del  esc            grv  left down rght @O;
   _    C-z  C-x  C-c  C-v  C-b            home end  @O, @O.   @O/  _
-            S-9  S-0  _    _    _    _    @Cr  _    @O[ @O]
+            S-9  S-0  _    _    _    _    @Cr  @O'  @O[ @O]
 )
 
 
 (deflayer mouse
-  _    _    _    _    _    _              _    _    _    _    _    _
-  _    @Nf4 @Nf3 @Nf2 @Nf1 _              _    S-1  S-2  S-3  S-4  _
-  _    @Nf8 @Nf7 @Nf6 @Nf5 _              _    S-5  S-6  S-7  S-8  _
-  _    @Nfe @Nfm @Nf0 @Nf9 _              _    S-9  S-0  S--  S-=  _
-            _    _    _    _    _    _    @Mr  _    _    _  
+  _    _    _    _    _    _              _    _    _    _    _    f12
+       f1   f2   f3   f4   f5             f6   f7   f8   f9   f10  f11
+  _    1    2    3    4    5              6    7    8    9    0
+  _    !    @    #    $    %              ^    S-7  *    S-9  S-0  _
+            _    _    _    _    _    _    @Mr  _    _    _
 )

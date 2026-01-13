@@ -216,6 +216,7 @@ xkb_symbols "editing" {
 
     key <VLUP> { [ Next ] };
     key <VLDN> { [ Prior ] };
+    key <MUTE> { [ Home ] };
 };
 
 partial modifier_keys

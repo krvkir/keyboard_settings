@@ -9,6 +9,7 @@ default xkb_keycodes "main"  {
     include "kk_evdev(keypad)"
     //include "kk_evdev(mod_hypr_lalt)"
     include "kk_evdev(mod_hypr_ralt)"
+    include "kk_evdev(volume_rocker)"
       
     // Added for pc105 compatibility
     <LSGT> = 94;
@@ -284,8 +285,9 @@ xkb_keycodes "internet_keyboard" {
     // <I243> = 243;	// #define KEY_DOCUMENTS 235
 };
 
-xkb_keycodes "thinkpad_s1" {
-    // Extra keys for ThinkPad Yoga S1
+xkb_keycodes "volume_rocker" {
+    // Extra keys for volume rocker
+    <MUTE> = 121;
     <VLDN> = 122;
     <VLUP> = 123;
 };
