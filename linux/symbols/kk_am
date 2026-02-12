@@ -67,18 +67,18 @@ xkb_symbols "phonetic" {
     include "am(basic)"
     name[Group1]= "Armenian (phonetic)";
 
-    key <AE01>	{ overlay1 = <V1>, [ Armenian_e,		Armenian_E	]};
-    key <AE02>	{ overlay1 = <V2>, [ Armenian_to,		Armenian_TO	]};
-    key <AE03>	{ overlay1 = <V3>, [ Armenian_pyur,	Armenian_PYUR	]};
-    key <AE04>	{ overlay1 = <V4>, [ Armenian_dza,	Armenian_DZA	]};
-    key <AE05>	{ overlay1 = <V5>, [ Armenian_je,		Armenian_JE	]};
-    key <AE06>	{ overlay1 = <V6>, [ Armenian_vyun,	Armenian_VYUN	]};
-    key <AE07>	{ overlay1 = <V7>, [ Armenian_ligature_ew,  U058F		]}; // Armenian Dram sign
-    key <AE08>	{ overlay1 = <V8>, [ Armenian_ra,		Armenian_RA	]};
-    key <AE09>	{ overlay1 = <V9>, [ Armenian_cha,	Armenian_CHA	]};
-    key <AE10>	{ overlay1 = <V0>, [ Armenian_tche,	Armenian_TCHE	]};
-    key <AE11>	{ overlay1 = <VMIN>, [ Armenian_hyphen,	U2015		]}; // quotation dash
-    key <AE12>	{ overlay1 = <VEQU>, [ Armenian_zhe,	Armenian_ZHE	]};
+    key <AE01>	{ overlay1 = <V1>, [ Armenian_e,		Armenian_E,    1, exclam	    ]};
+    key <AE02>	{ overlay1 = <V2>, [ Armenian_to,		Armenian_TO,   2, at	        ]};
+    key <AE03>	{ overlay1 = <V3>, [ Armenian_pyur,	Armenian_PYUR, 3, numbersign	]};
+    key <AE04>	{ overlay1 = <V4>, [ Armenian_dza,	Armenian_DZA,  4, dollar	    ]};
+    key <AE05>	{ overlay1 = <V5>, [ Armenian_je,		Armenian_JE,   5, percent	    ]};
+    key <AE06>	{ overlay1 = <V6>, [ Armenian_vyun,	Armenian_VYUN, 6, asciicircum	]};
+    key <AE07>	{ overlay1 = <V7>, [ Armenian_ligature_ew,  U058F, 7, ampersand		]}; // Armenian Dram sign
+    key <AE08>	{ overlay1 = <V8>, [ Armenian_ra,		Armenian_RA,   8, asterisk	  ]};
+    key <AE09>	{ overlay1 = <V9>, [ Armenian_cha,	Armenian_CHA,  9, parenleft   ]};
+    key <AE10>	{ overlay1 = <V0>, [ Armenian_tche,	Armenian_TCHE, 0, parenright  ]};
+    key <AE11>	{ overlay1 = <VMIN>, [ Armenian_hyphen,	U2015,      minus, underscore		]}; // quotation dash
+    key <AE12>	{ overlay1 = <VEQU>, [ Armenian_zhe,	Armenian_ZHE, equal, plus	]};
 
     key <AD01>	{ overlay1 = <VQ>, [ Armenian_ke,		Armenian_KE	]};
     key <AD02>	{ overlay1 = <VW>, [ Armenian_vo,		Armenian_VO	]};
@@ -90,8 +90,8 @@ xkb_symbols "phonetic" {
     key <AD08>	{ overlay1 = <VI>, [ Armenian_ini,	Armenian_INI	]};
     key <AD09>	{ overlay1 = <VO>, [ Armenian_o,		Armenian_O	]};
     key <AD10>	{ overlay1 = <VP>, [ Armenian_pe,		Armenian_PE	]};
-    key <AD11>	{ overlay1 = <VLBR>, [ Armenian_khe,	Armenian_KHE	]};
-    key <AD12>	{ overlay1 = <VRBR>, [ Armenian_tsa,	Armenian_TSA	]};
+    key <AD11>	{ overlay1 = <VLBR>, [ Armenian_khe,	Armenian_KHE, bracketleft, braceleft	]};
+    key <AD12>	{ overlay1 = <VRBR>, [ Armenian_tsa,	Armenian_TSA, bracketright, braceright	]};
 
     key <AC01>	{ overlay1 = <VA>, [ Armenian_ayb,	Armenian_AYB	]};
     key <AC02>	{ overlay1 = <VS>, [ Armenian_se,		Armenian_SE	]};
@@ -102,8 +102,8 @@ xkb_symbols "phonetic" {
     key <AC07>	{ overlay1 = <VJ>, [ Armenian_hi,		Armenian_HI	]};
     key <AC08>	{ overlay1 = <VK>, [ Armenian_ken,	Armenian_KEN	]};
     key <AC09>	{ overlay1 = <VL>, [ Armenian_lyun,	Armenian_LYUN	]};
-    key <AC10>	{ overlay1 = <VSEM>, [ semicolon,		Armenian_full_stop ]};
-    key <AC11>	{ overlay1 = <VAPO>, [ Armenian_accent,	quotedbl	]};
+    key <AC10>	{ overlay1 = <VSEM>, [ semicolon,		Armenian_full_stop, semicolon, colon ]};
+    key <AC11>	{ overlay1 = <VAPO>, [ Armenian_accent,	quotedbl,       apostrophe, quotedbl ]};
     key <BKSL>	{[ Armenian_sha,	Armenian_SHA	]};
 
     key <AB01>	{ overlay1 = <VZ>, [ Armenian_za,		Armenian_ZA	]};
@@ -113,9 +113,9 @@ xkb_symbols "phonetic" {
     key <AB05>	{ overlay1 = <VB>, [ Armenian_ben,	Armenian_BEN	]};
     key <AB06>	{ overlay1 = <VN>, [ Armenian_nu,		Armenian_NU	]};
     key <AB07>	{ overlay1 = <VM>, [ Armenian_men,	Armenian_MEN	]};
-    key <AB08>	{ overlay1 = <VCOM>, [ comma,		guillemotleft	]};
-    key <AB09>	{ overlay1 = <VPER>, [ U2024,		guillemotright	]}; // Armenian semicolon (mijaket)
-    key <AB10>	{ overlay1 = <VSLA>, [ slash,		Armenian_question ]};
+    key <AB08>	{ overlay1 = <VCOM>, [ comma,		guillemotleft,     comma,  less	]};
+    key <AB09>	{ overlay1 = <VPER>, [ U2024,		guillemotright,    period, greater	]}; // Armenian semicolon (mijaket)
+    key <AB10>	{ overlay1 = <VSLA>, [ slash,		Armenian_question, slash,  question ]};
 };
 
 partial alphanumeric_keys
