@@ -5,10 +5,10 @@
   ;; For wired connection:
   ;; input  (device-file "/dev/input/by-id/usb-sofle_Eyelash_Sofle_62AC5CDA6B8C95E1-if02-event-kbd")
   output (uinput-sink "KMonad output"
-		       ;; To understand the importance of the following line, see the section on
-		       ;; Compose-key sequences at the near-bottom of this file.
-		       ;; "sleep 1 && setxkbmap -option compose:ralt"
-		       )
+       ;; To understand the importance of the following line, see the section on
+       ;; Compose-key sequences at the near-bottom of this file.
+       ;; "sleep 1 && setxkbmap -option compose:ralt"
+       )
   cmp-seq ralt    ;; Set the compose key to `RightAlt'
   cmp-seq-delay 5 ;; 5ms delay between each compose-key sequence press
   ;; key-seq-delay 5 ;; 5ms delay between each outputted key event
@@ -46,41 +46,47 @@
        q    w    e    r    t              y    u    i    o    p    [
   caps a    s    d    f    g              h    j    k    l    ;
   lsft z    x    c    v    b              n    m    ,    .    /    rsft
-            up   down lalt tab  spc  ret  '    ralt -    =
+            up   down ralt tab  spc  ret  '    rctl -    =
 )
 
 
+;; Base mode aliases
 (defalias
+  ;; Layers
   nav (layer-toggle navigation)
-  mou (layer-toggle mouse)
-  qwe (layer-switch qwerty)
-  Ma (tap-hold-next-release 300 a lctl)
-  Ms (tap-hold-next-release 300 s lalt)
-  Md (tap-hold-next-release 300 d lsft)
-  Mf (tap-hold-next-release 300 f lctl)
-  Mg (tap-hold-next-release 300 g lctl)
-  Mh (tap-hold-next-release 300 h lctl)
-  Mj (tap-hold-next-release 300 j lctl)
-  Mk (tap-hold-next-release 300 k rsft)
-  Ml (tap-hold-next-release 200 l lalt)
-  Msc (tap-hold-next-release 200 ; lctl)
-  Msp (tap-hold-next-release 300 spc @mou)
-  Mtb (tap-hold-next-release 300 tab lmet)
-  Mre (tap-hold-next-release 300 ret @nav)
-  Mla (tap-hold-next-release 300 lalt @nav)
-  Mao (tap-hold-next-release 300 ' lsft)
-  Mral (tap-hold-next-release 300 ralt rctl)
+  dig (layer-toggle digits)
+  bas (layer-switch base)
+  ;; Home row mods
+  ;; ... left
+  _a  (tap-hold-next-release 300 a lctl)
+  _s  (tap-hold-next-release 300 s lalt)
+  _d  (tap-hold-next-release 300 d lsft)
+  _f  (tap-hold-next-release 300 f lctl)
+  ;;  ... right
+  _j  (tap-hold-next-release 300 j lctl)
+  _k  (tap-hold-next-release 300 k rsft)
+  _l  (tap-hold-next-release 200 l lalt)
+  _sc (tap-hold-next-release 200 ; lctl)
+  ;; Thumb cluster
+  ;; ... left
+  _ra (tap-hold-next-release 300 ralt @nav)
+  _tb (tap-hold-next-release 300 tab  @dig)
+  _sp (tap-hold-next-release 300 spc  lmet)
+  ;; ... right
+  _re  (tap-hold-next-release 300 ret  @nav)
+  _ao  (tap-hold-next-release 300 '    lsft)
+  _rc  (tap-hold-next-release 300 rctl)
   )
 
-
-(deflayer qwerty
-  grv  1    2    3    4    5              6    7    8    9    0    ]
-       q    w    e    r    t              y    u    i    o    p    [
-  @nav @Ma  @Ms  @Md  @Mf  g              h    @Mj  @Mk  @Ml  @Msc
-  lsft z    x    c    v    b              n    m    ,    .    /    rsft
-            up   down @Mla @Mtb @Msp @Mre @Mao @Mral -    =
+(deflayer base
+  grv  1    2    3    4    5              6    7     8    9    0    ]
+       q    w    e    r    t              y    u     i    o    p    [
+  @nav @_a  @_s  @_d  @_f  g              h    @_j   @_k  @_l  @_sc
+  lsft z    x    c    v    b              n    m     ,    .    /    rsft
+            up   down @_ra @_tb @_sp @_re @_ao rctl  -    =
 )
 
+;; Navigation mode aliases
 (defalias
   Cbs C-bspc
   Cdl C-del
@@ -103,36 +109,17 @@
   O' (tap-macro (around caps ') caps)
   O[ (tap-macro (around caps [) caps)
   O] (tap-macro (around caps ]) caps)
-  O6 (tap-macro (around caps 6) caps)
-  O7 (tap-macro (around caps 7) caps)
-  O8 (tap-macro (around caps 8) caps)
-  O9 (tap-macro (around caps 9) caps)
-  O0 (tap-macro (around caps 0) caps)
-  Nf1 (tap-hold-next-release 300 1 f1)
-  Nf2 (tap-hold-next-release 300 2 f2)
-  Nf3 (tap-hold-next-release 300 3 f3)
-  Nf4 (tap-hold-next-release 300 4 f4)
-  Nf5 (tap-hold-next-release 300 5 f5)
-  Nf6 (tap-hold-next-release 300 6 f6)
-  Nf7 (tap-hold-next-release 300 7 f7)
-  Nf8 (tap-hold-next-release 300 8 f8)
-  Nf9 (tap-hold-next-release 300 9 f9)
-  Nf0 (tap-hold-next-release 300 0 f10)
-  Nfm (tap-hold-next-release 300 - f11)
-  Nfe (tap-hold-next-release 300 = f12)
   )
-
 
 (deflayer navigation
   _    f1   f2   f3   f4   f5             f6   f7   f8   f9   f10  @O]
        pgup pgdn @Cbs @Cdl =              -    @Clt up   @Crt \    @O[
   caps @Ct  ret  bspc del  esc            grv  left down rght @O;
-  _    C-z  C-x  C-c  C-v  C-b            home end  @O, @O.   @O/  _
-            S-9  S-0  _    _    _    _    @Cr  @O'  @O[ @O]
+  _    C-z  C-x  C-c  C-v  C-b            home end  @O,  @O.  @O/  _
+            _    _    _    _    _    _    _    @O'  _    _
 )
 
-
-(deflayer mouse
+(deflayer digits
   _    _    _    _    _    _              _    _    _    _    _    f12
        f1   f2   f3   f4   f5             f6   f7   f8   f9   f10  f11
   _    1    2    3    4    5              6    7    8    9    0

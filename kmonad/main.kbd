@@ -49,28 +49,26 @@
 
 
 (defalias
-  nav (layer-toggle navigation) ;; Bind num to a button that switches to a layer
-  mou (layer-toggle mouse) ;; Bind num to a button that switches to a layer
-  Ma (tap-hold-next-release 300 a lctl) ;; Bind num to a button that switches to a layer
-  Ms (tap-hold-next-release 300 s lalt) ;; Bind num to a button that switches to a layer
-  Md (tap-hold-next-release 300 d lsft) ;; Bind num to a button that switches to a layer
-  Mf (tap-hold-next-release 300 f lsft) ;; Bind num to a button that switches to a layer
-  Mg (tap-hold-next-release 300 g lctl) ;; Bind num to a button that switches to a layer
-  Mh (tap-hold-next-release 300 h lctl) ;; Bind num to a button that switches to a layer
-  Mj (tap-hold-next-release 300 j lsft) ;; Bind num to a button that switches to a layer
-  Mk (tap-hold-next-release 300 k rsft) ;; Bind num to a button that switches to a layer
-  Ml (tap-hold-next-release 300 l lalt) ;; Bind num to a button that switches to a layer
-  Msc (tap-hold-next-release 300 ; lctl) ;; Bind num to a button that switches to a layer
-  Msp (tap-hold-next-release 300 spc lmet)
-  )
+  nav (layer-toggle navigation)
+  _a (tap-hold-next-release 300 a lctl)
+  _s (tap-hold-next-release 300 s lalt)
+  _d (tap-hold-next-release 300 d lsft)
+  _f (tap-hold-next-release 300 f lctl)
+  _j (tap-hold-next-release 300 j lctl)
+  _k (tap-hold-next-release 300 k rsft)
+  _l (tap-hold-next-release 300 l lalt)
+  _sc (tap-hold-next-release 300 ; lctl)
+  _sp (tap-hold-next-release 300 spc lmet)
+  _re  (tap-hold-next-release 300 ret @nav)
+)
 
 
 (deflayer qwerty
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @nav @Ma  @Ms  @Md  @Mf  @Mg  @Mh  @Mj  @Mk  @Ml  @Msc  '    ret
+  @nav @_a  @_s  @_d  @_f  g    h    @_j  @_k  @_l  @_sc '    @_re
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           @Msp           ralt rmet cmp  rctl
+  lctl lmet ralt           @_sp           lalt rmet cmp  rctl
 )
 
 
@@ -88,7 +86,7 @@
   ;; we add extra caps tap after each key.
   ;; The best way would be to have special key which means comma and only comma
   ;; and which doesn't depend on layout. Maybe a modifier which normally does nothing
-  ;; but can be handled at layout level. But we have only 3 modifiers. 
+  ;; but can be handled at layout level. But we have only 3 modifiers.
   O. (tap-macro (around caps .) caps)
   O, (tap-macro (around caps ,) caps)
   O/ (tap-macro (around caps /) caps)
@@ -109,14 +107,6 @@
   @Ct  pgup pgdn @Cbs @Cdl =    -    @Clt up   @Crt \    @O[  @O]  \
   caps tab  ret  bspc del  esc  grv  left down rght @O;  @O'  @Cr
   _    C-z  C-x  C-c  C-v  C-b  home end  @O, @O.   @O/  _
-  _    _    _              _              _    _    _    _
-)
-
-(deflayer mouse
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
-  _    _    _    _    _    _    _    1    2    3    4    _    _    _
-  _    _    _    _    _    _    _    5    6    7    8    _    @Mr
-  _    _    _    _    _    _    9    0    _    _    _    _
   _    _    _              _              _    _    _    _
 )
 
