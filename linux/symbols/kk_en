@@ -8,7 +8,7 @@ xkb_symbols "pc105" {
 
     // The following keys are common to all layouts.
     key <BKSL> { [ backslash, bar ] };
-    key <SPCE> { [ space ] };
+    key <SPCE> { [ space, ISO_Next_Group ] };
     key <TLDE> { overlay1 = <VGRA>, [ grave, asciitilde, Escape ] };
     key <AE01> { overlay1 = <V1>, [ 1, exclam ] };
     key <AE02> { overlay1 = <V2>, [ 2, at ] };
@@ -30,7 +30,6 @@ xkb_symbols "pc105" {
     include "keypad(x11)"
     include "kk_en(virtualkeys)"
     include "kk_en(overlay1_switch_caps)"
-    //include "kk_en(overlay2_switch_lalt)"
 
     key <BKSP> { [ BackSpace, BackSpace ] };
 
@@ -42,14 +41,17 @@ xkb_symbols "pc105" {
 
     key <LFSH> { [ Shift_L ] };
     key <RTSH> { [ Shift_R ] };
+    # key <RTSH> { [ ISO_Level3_Shift ] };
 
     key <LCTL> { [ Control_L ] };
 
     // Languages and symbols are switched via right alt and ctrl.
     key <RCTL> { [ ISO_Level3_Shift ] };
-    key <HYPR> { [ ISO_Next_Group, Multi_key ] };
+    // (this is actually the alt to the right of the spacebar, aka 'right alt')
+    key <HYPR> { [ ISO_Next_Group, ISO_Prev_Group, Multi_key ] };
 
     key <LALT> { [ Alt_L, Meta_L ] };
+    // (who knows what key corresponds to this scan code...)
     key <RALT> { [ Alt_R, Meta_R ] };
 
     key <LWIN> { [ Super_L ] };
@@ -78,8 +80,8 @@ xkb_symbols "latin" {
     key.type = "FOUR_LEVEL";
     name[Group1]= "English (US)";
 
-    key <KPSU> { overlay1 = <VLBR>, [ minus, underscore ] };
-    key <KPAD> { overlay1 = <VRBR>, [ equal, plus ] };
+    key <KPSU> { overlay1 = <VLBR>, [ minus, underscore, minus, underscore ] };
+    key <KPAD> { overlay1 = <VRBR>, [ equal, plus, equal, plus ] };
    
     key <AD01> { overlay1 = <VQ>, [ q, Q ] };
     key <AD02> { overlay1 = <VW>, [ w, W ] };
@@ -91,8 +93,8 @@ xkb_symbols "latin" {
     key <AD08> { overlay1 = <VI>, [ i, I ] };
     key <AD09> { overlay1 = <VO>, [ o, O, odiaeresis, Odiaeresis ]};
     key <AD10> { overlay1 = <VQ>, [ p, P ] };
-    key <AD11> { overlay1 = <VLBR>, [ bracketleft, braceleft ] };
-    key <AD12> { overlay1 = <VRBR>, [ bracketright, braceright ] };
+    key <AD11> { overlay1 = <VLBR>, [ bracketleft, braceleft, bracketleft, braceleft ] };
+    key <AD12> { overlay1 = <VRBR>, [ bracketright, braceright, bracketright, braceright ] };
 
     key <AC01> { overlay1 = <VA>, [ a, A, adiaeresis, Adiaeresis ] };
     key <AC02> { overlay1 = <VS>, [ s, S, ssharp, U1E9E ] };
@@ -103,8 +105,9 @@ xkb_symbols "latin" {
     key <AC07> { overlay1 = <VJ>, [ j, J ] };
     key <AC08> { overlay1 = <VK>, [ k, K ] };
     key <AC09> { overlay1 = <VL>, [ l, L ] };
-    key <AC10> { overlay1 = <VSEM>, [ semicolon, colon, dead_diaeresis ] };
-    key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl ] };
+    # key <AC10> { overlay1 = <VSEM>, [ semicolon, colon, dead_diaeresis ] };
+    key <AC10> { overlay1 = <VSEM>, [ semicolon, colon, semicolon, colon ] };
+    key <AC11> { overlay1 = <VAPO>, [ apostrophe, quotedbl, apostrophe, quotedbl ] };
     
     key <AB01> { overlay1 = <VZ>, [ z, Z ] };
     key <AB02> { overlay1 = <VX>, [ x, X ] };
@@ -113,9 +116,9 @@ xkb_symbols "latin" {
     key <AB05> { overlay1 = <VB>, [ b, B ] };
     key <AB06> { overlay1 = <VN>, [ n, N ] };
     key <AB07> { overlay1 = <VM>, [ m, M ] };
-    key <AB08> { overlay1 = <VCOM>, [ comma, less ] };
-    key <AB09> { overlay1 = <VPER>, [ period, greater ] };
-    key <AB10> { overlay1 = <VSLA>, [ slash, question ] };
+    key <AB08> { overlay1 = <VCOM>, [ comma, less, comma, less ] };
+    key <AB09> { overlay1 = <VPER>, [ period, greater, period, greater ] };
+    key <AB10> { overlay1 = <VSLA>, [ slash, question, slash, question ] };
 };
 
 // Virtual rows
@@ -224,13 +227,5 @@ xkb_symbols "overlay1_switch_caps" {
     replace key <CAPS> {
         [ NoSymbol ],
         actions = [ SetControls(controls=overlay1) ]
-    };
-};
-
-partial modifier_keys
-xkb_symbols "overlay2_switch_lalt" {
-    replace key <LALT> {
-        [ NoSymbol ]
-        , actions = [ SetControls(controls=overlay2) ]
     };
 };
